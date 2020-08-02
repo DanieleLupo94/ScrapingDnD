@@ -9,9 +9,12 @@ import webkit_server
 
 # Pagina principale da cui fare scraping
 url = 'http://iws.mx/dnd/?list'
+# URL di base per le varie pagine
+baseUrl = 'http://iws.mx/dnd/'
 
 # Lista di categorie da ignorare
 categorieDaSaltare = ['Everything', 'Glossary']
+categorieEstratte = []
 
 # Configurazione del server in modo da evitare memory leak
 dryscrape.start_xvfb()
@@ -46,14 +49,43 @@ def main():
     for div in divs:
         if (div.b.get_text() not in categorieDaSaltare):
             text = div.b.get_text()
-            # Elimino gli spazi
+            # Elimino gli spazi consecutivi, all'inizio ed alla fine
+            text = text.strip()
+            # Elimino gli spazi intermedi
             text = text.replace(' ', '')
             # Elimino la parte destra dello slash
             if ('/' in text):
                 text = text[0:text.index('/')]
+                # Elimino gli spazi intermedi
+                text = text.replace(' ', '')
             # Converto tutto in minuscole
             text = text.lower()
-            print(text)
+            text = text.strip()
+            categorieEstratte.append(text)
+    print('Categorie estratte: \n', categorieEstratte)
+
+    # Apro una pagina per ogni categoria
+    for categoria in categorieEstratte:
+        link = url + '.name.' + categoria
+        # TODO: Fare scraping di ogni categoria
+    # DEBUG: Per ora provo su una sola categoria
+    link = url + '.name.' + categorieEstratte[0]
+    scrapingPagina(link)
+
+
+def scrapingPagina(link):
+    pagineElementi = []
+    session = dryscrape.Session()
+    session.visit(link)
+    time.sleep(5)
+    response = session.body()
+    soup = BeautifulSoup(response, 'html.parser')
+    tbody = soup.select('table#act_list_table tbody')
+    tbody = tbody[0]
+    tbody = tbody.children
+    for tr in tbody:
+        pagineElementi.append(baseUrl + tr.td.a['href'])
+    print('Elementi ricavati:\n', pagineElementi)
 
 
 try:
