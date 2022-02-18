@@ -2,44 +2,56 @@ import requests as req
 from lxml import html
 import json
 
+#urls = ["http://iws.mx/dnd/4e_database_files/armor/_listing.js", "http://iws.mx/dnd/4e_database_files/monster/_listing.js"]
+#urls = ["http://iws.mx/dnd/4e_database_files/armor/_listing.js"]
 urls = ["http://iws.mx/dnd/4e_database_files/monster/_listing.js"]
 
-def decodeMostri(content):
-    strMostri = content[len('od.reader.jsonp_data_listing(20130703, "monster", ["ID", "Name", "Level", "CombatRole", "GroupRole", "Size", "CreatureType", "SourceBook"], [') : -2]
-    strMostri = strMostri.replace("],", "]|").split("|")
+def problema(riga):
+    print("Riga con problema ", riga)
+
+def decodeContent(content):
+    inizioCampi = content.find("[")
+    fineCampi = content.find("]")
+    fineCampi += 1
+    header = content[inizioCampi : fineCampi]
+    header = header.strip().split('"')[1::2]
+    print("Header ", header)
+    strMostri = content[fineCampi+3 : -2].strip()
+    strMostri = strMostri.replace("\"],\n", "\"]|\n").split("|")
+    print("mostro ", strMostri[0].strip().split('"')[1::2])
     
     mostri = []
     for mostro in strMostri:
-        campiMostro = mostro.strip().split('"')[1::2]
-        mostri.append({
-            "ID":campiMostro[0],
-            "Name":campiMostro[1],
-            "Level":campiMostro[2],
-            "CombatRole":campiMostro[3],
-            "GroupRole":campiMostro[4],
-            "Size":campiMostro[5],
-            "CreatureType":campiMostro[6],
-            "SourceBook":campiMostro[7]
-        })
-
+        campiMostro = mostro.strip().replace("\\\"", "").split('"')[1::2]
+        if len(campiMostro) != len(header):
+            problema(mostro)
+            break
+        tmp = {}
+        for indice in range(len(header)):
+            tmpHeader = header[indice]
+            #print("tmp[", tmpHeader, "]=campiMostro[", indice, "]", ", campo prima ", campiMostro[indice-1])
+            tmp[tmpHeader] = campiMostro[indice]
+        mostri.append(tmp)
+    nomeFile = mostri[0]["ID"] + ".json"
     tmp = []
-    with open('jsonMostri.json', 'w+', encoding="utf-8") as f:
+    with open(nomeFile, 'w+', encoding="utf-8") as f:
         json.dump(mostri, f)
-    with open('jsonMostri.json', 'r', encoding='utf-8') as f:
+    with open(nomeFile, 'r', encoding='utf-8') as f:
         tmp = json.load(f)
     if mostri == tmp:
-        print("Creazione del file dei mostri avvenuta con successo.")
+        print("Creazione del file avvenuta con successo.")
     else:
-        print("Errore nel salvataggio dei mostri nel file json.")
+        print("Errore nel salvataggio nel file json.")
 
 def getDati(url):
     response = req.get(url)
     if response.status_code == 200:
         risposta = response.content.decode('UTF-8')
-        if 'monster' in risposta:
-            decodeMostri(risposta)
+        with open("risposta", 'w+', encoding="utf-8") as f:
+            f.write(risposta)
+        decodeContent(risposta)
     else:
-        print("Errore chiamata")
+        print("Errore chiamata dell'url ", url)
 
 def main():
     for url in urls:
