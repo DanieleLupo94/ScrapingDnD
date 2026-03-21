@@ -1,0 +1,724 @@
+2025-11-19 13:53:26,958 - INFO - Inizio download da: https://iws.mx/dnd/4e_database_files/
+2025-11-19 13:53:26,958 - INFO - Directory di output: /Users/dw/Git/ScrapingDnD/dnd_4e_database
+2025-11-19 13:53:29,007 - WARNING - ⚠ Tentativo 1 fallito per https://github.com/Sheep-y/trpg-dnd-4e-db/releases: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:53:30,154 - WARNING - ⚠ Tentativo 2 fallito per https://github.com/Sheep-y/trpg-dnd-4e-db/releases: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:53:32,355 - ERROR - ✗ Errore definitivo per https://github.com/Sheep-y/trpg-dnd-4e-db/releases: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:53:33,615 - WARNING - ⚠ Tentativo 1 fallito per https://github.com/Sheep-y/trpg-dnd-4e-db/issues: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:53:34,760 - WARNING - ⚠ Tentativo 2 fallito per https://github.com/Sheep-y/trpg-dnd-4e-db/issues: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:53:36,903 - ERROR - ✗ Errore definitivo per https://github.com/Sheep-y/trpg-dnd-4e-db/issues: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:53:37,639 - WARNING - ⚠ Tentativo 1 fallito per https://play.google.com/store/apps/details?id=com.android.chrome: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:53:38,819 - WARNING - ⚠ Tentativo 2 fallito per https://play.google.com/store/apps/details?id=com.android.chrome: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:53:41,040 - ERROR - ✗ Errore definitivo per https://play.google.com/store/apps/details?id=com.android.chrome: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:53:41,717 - WARNING - ⚠ Tentativo 1 fallito per https://play.google.com/store/apps/details?id=org.mozilla.firefox: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:53:42,873 - WARNING - ⚠ Tentativo 2 fallito per https://play.google.com/store/apps/details?id=org.mozilla.firefox: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:53:45,057 - ERROR - ✗ Errore definitivo per https://play.google.com/store/apps/details?id=org.mozilla.firefox: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:53:45,733 - WARNING - ⚠ Tentativo 1 fallito per https://play.google.com/store/apps/details?id=com.android.chrome: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:53:47,033 - WARNING - ⚠ Tentativo 2 fallito per https://play.google.com/store/apps/details?id=com.android.chrome: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:53:49,223 - ERROR - ✗ Errore definitivo per https://play.google.com/store/apps/details?id=com.android.chrome: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:53:49,927 - WARNING - ⚠ Tentativo 1 fallito per https://play.google.com/store/apps/details?id=org.mozilla.firefox: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:53:51,135 - WARNING - ⚠ Tentativo 2 fallito per https://play.google.com/store/apps/details?id=org.mozilla.firefox: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:53:53,316 - ERROR - ✗ Errore definitivo per https://play.google.com/store/apps/details?id=org.mozilla.firefox: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:53:54,506 - WARNING - ⚠ Tentativo 1 fallito per https://github.com/Sheep-y/trpg-dnd-4e-db: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:53:55,659 - WARNING - ⚠ Tentativo 2 fallito per https://github.com/Sheep-y/trpg-dnd-4e-db: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:53:57,804 - ERROR - ✗ Errore definitivo per https://github.com/Sheep-y/trpg-dnd-4e-db: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:53:58,630 - WARNING - ⚠ Tentativo 1 fallito per https://raw.githubusercontent.com/Sheep-y/trpg-dnd-4e-db/res/img/History - 1st alpha.jpg: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/Sheep-y/trpg-dnd-4e-db/res/img/History%20-%201st%20alpha.jpg
+2025-11-19 13:53:59,731 - WARNING - ⚠ Tentativo 2 fallito per https://raw.githubusercontent.com/Sheep-y/trpg-dnd-4e-db/res/img/History - 1st alpha.jpg: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/Sheep-y/trpg-dnd-4e-db/res/img/History%20-%201st%20alpha.jpg
+2025-11-19 13:54:01,841 - ERROR - ✗ Errore definitivo per https://raw.githubusercontent.com/Sheep-y/trpg-dnd-4e-db/res/img/History - 1st alpha.jpg: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/Sheep-y/trpg-dnd-4e-db/res/img/History%20-%201st%20alpha.jpg
+2025-11-19 13:54:02,607 - WARNING - ⚠ Tentativo 1 fallito per https://www.youtube.com/watch?v=z-1_3VCEyG0: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:03,794 - WARNING - ⚠ Tentativo 2 fallito per https://www.youtube.com/watch?v=z-1_3VCEyG0: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:06,007 - ERROR - ✗ Errore definitivo per https://www.youtube.com/watch?v=z-1_3VCEyG0: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:06,669 - WARNING - ⚠ Tentativo 1 fallito per https://www.youtube.com/watch?v=2hjzWeDPHfk: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:07,856 - WARNING - ⚠ Tentativo 2 fallito per https://www.youtube.com/watch?v=2hjzWeDPHfk: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:10,090 - ERROR - ✗ Errore definitivo per https://www.youtube.com/watch?v=2hjzWeDPHfk: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:10,887 - WARNING - ⚠ Tentativo 1 fallito per https://en.wikipedia.org/wiki/Bookmarklet: 403 Client Error: Forbidden for url: https://en.wikipedia.org/wiki/Bookmarklet
+2025-11-19 13:54:12,073 - WARNING - ⚠ Tentativo 2 fallito per https://en.wikipedia.org/wiki/Bookmarklet: 403 Client Error: Forbidden for url: https://en.wikipedia.org/wiki/Bookmarklet
+2025-11-19 13:54:14,227 - ERROR - ✗ Errore definitivo per https://en.wikipedia.org/wiki/Bookmarklet: 403 Client Error: Forbidden for url: https://en.wikipedia.org/wiki/Bookmarklet
+2025-11-19 13:54:14,908 - WARNING - ⚠ Tentativo 1 fallito per https://raw.githubusercontent.com/Sheep-y/trpg-dnd-4e-db/master/res/img/History - 1st gen.jpg: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:15,999 - WARNING - ⚠ Tentativo 2 fallito per https://raw.githubusercontent.com/Sheep-y/trpg-dnd-4e-db/master/res/img/History - 1st gen.jpg: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:18,231 - ERROR - ✗ Errore definitivo per https://raw.githubusercontent.com/Sheep-y/trpg-dnd-4e-db/master/res/img/History - 1st gen.jpg: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:19,333 - WARNING - ⚠ Tentativo 1 fallito per http://www.wizards.com/default.asp?x=dnd/dnd/20030711x: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:20,629 - WARNING - ⚠ Tentativo 2 fallito per http://www.wizards.com/default.asp?x=dnd/dnd/20030711x: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:22,917 - ERROR - ✗ Errore definitivo per http://www.wizards.com/default.asp?x=dnd/dnd/20030711x: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:23,649 - WARNING - ⚠ Tentativo 1 fallito per http://en.wikipedia.org/wiki/Coral_Content_Distribution_Network: 403 Client Error: Forbidden for url: https://en.wikipedia.org/wiki/Coral_Content_Distribution_Network
+2025-11-19 13:54:24,914 - WARNING - ⚠ Tentativo 2 fallito per http://en.wikipedia.org/wiki/Coral_Content_Distribution_Network: 403 Client Error: Forbidden for url: https://en.wikipedia.org/wiki/Coral_Content_Distribution_Network
+2025-11-19 13:54:27,188 - ERROR - ✗ Errore definitivo per http://en.wikipedia.org/wiki/Coral_Content_Distribution_Network: 403 Client Error: Forbidden for url: https://en.wikipedia.org/wiki/Coral_Content_Distribution_Network
+2025-11-19 13:54:27,931 - WARNING - ⚠ Tentativo 1 fallito per https://raw.githubusercontent.com/Sheep-y/trpg-dnd-4e-db/master/res/img/History - 2nd alpha.jpg: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:29,169 - WARNING - ⚠ Tentativo 2 fallito per https://raw.githubusercontent.com/Sheep-y/trpg-dnd-4e-db/master/res/img/History - 2nd alpha.jpg: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:31,281 - ERROR - ✗ Errore definitivo per https://raw.githubusercontent.com/Sheep-y/trpg-dnd-4e-db/master/res/img/History - 2nd alpha.jpg: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:32,789 - WARNING - ⚠ Tentativo 1 fallito per http://jquerymobile.com/â: 404 Client Error: Not Found for url: https://jquerymobile.com/%C3%A2%C2%80%C2%8E
+2025-11-19 13:54:34,441 - WARNING - ⚠ Tentativo 2 fallito per http://jquerymobile.com/â: 404 Client Error: Not Found for url: https://jquerymobile.com/%C3%A2%C2%80%C2%8E
+2025-11-19 13:54:37,105 - ERROR - ✗ Errore definitivo per http://jquerymobile.com/â: 404 Client Error: Not Found for url: https://jquerymobile.com/%C3%A2%C2%80%C2%8E
+2025-11-19 13:54:39,458 - WARNING - ⚠ Tentativo 1 fallito per http://ails.deviantart.com/art/420-Pixel-Art-Icons-for-RPG-129892453: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:42,178 - WARNING - ⚠ Tentativo 2 fallito per http://ails.deviantart.com/art/420-Pixel-Art-Icons-for-RPG-129892453: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:45,727 - ERROR - ✗ Errore definitivo per http://ails.deviantart.com/art/420-Pixel-Art-Icons-for-RPG-129892453: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:46,475 - WARNING - ⚠ Tentativo 1 fallito per https://raw.githubusercontent.com/Sheep-y/trpg-dnd-4e-db/master/res/img/History - 3rd alpha.jpg: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:47,768 - WARNING - ⚠ Tentativo 2 fallito per https://raw.githubusercontent.com/Sheep-y/trpg-dnd-4e-db/master/res/img/History - 3rd alpha.jpg: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:49,880 - ERROR - ✗ Errore definitivo per https://raw.githubusercontent.com/Sheep-y/trpg-dnd-4e-db/master/res/img/History - 3rd alpha.jpg: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:51,408 - WARNING - ⚠ Tentativo 1 fallito per https://msdn.microsoft.com/library/dn423948(v=vs.85).aspx: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:52,646 - WARNING - ⚠ Tentativo 2 fallito per https://msdn.microsoft.com/library/dn423948(v=vs.85).aspx: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:55,012 - ERROR - ✗ Errore definitivo per https://msdn.microsoft.com/library/dn423948(v=vs.85).aspx: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:55,745 - WARNING - ⚠ Tentativo 1 fallito per https://raw.githubusercontent.com/Sheep-y/trpg-dnd-4e-db/master/res/img/History - v3.5 viewer.png: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:56,865 - WARNING - ⚠ Tentativo 2 fallito per https://raw.githubusercontent.com/Sheep-y/trpg-dnd-4e-db/master/res/img/History - v3.5 viewer.png: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:54:58,960 - ERROR - ✗ Errore definitivo per https://raw.githubusercontent.com/Sheep-y/trpg-dnd-4e-db/master/res/img/History - v3.5 viewer.png: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:55:02,274 - WARNING - ⚠ Tentativo 1 fallito per http://www.enworld.org/forum/content.php?3087-4e-DnD-Insider-Moving: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:55:05,212 - WARNING - ⚠ Tentativo 2 fallito per http://www.enworld.org/forum/content.php?3087-4e-DnD-Insider-Moving: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:55:08,974 - ERROR - ✗ Errore definitivo per http://www.enworld.org/forum/content.php?3087-4e-DnD-Insider-Moving: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:55:09,661 - WARNING - ⚠ Tentativo 1 fallito per https://en.wikipedia.org/wiki/JavaFX: 403 Client Error: Forbidden for url: https://en.wikipedia.org/wiki/JavaFX
+2025-11-19 13:55:10,834 - WARNING - ⚠ Tentativo 2 fallito per https://en.wikipedia.org/wiki/JavaFX: 403 Client Error: Forbidden for url: https://en.wikipedia.org/wiki/JavaFX
+2025-11-19 13:55:13,007 - ERROR - ✗ Errore definitivo per https://en.wikipedia.org/wiki/JavaFX: 403 Client Error: Forbidden for url: https://en.wikipedia.org/wiki/JavaFX
+2025-11-19 13:55:14,031 - WARNING - ⚠ Tentativo 1 fallito per https://docs.oracle.com/javase/8/javafx/api/javafx/scene/web/WebEngine.html: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:55:15,186 - WARNING - ⚠ Tentativo 2 fallito per https://docs.oracle.com/javase/8/javafx/api/javafx/scene/web/WebEngine.html: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:55:17,299 - ERROR - ✗ Errore definitivo per https://docs.oracle.com/javase/8/javafx/api/javafx/scene/web/WebEngine.html: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:55:18,408 - WARNING - ⚠ Tentativo 1 fallito per https://github.com/Sheep-y/trpg-dnd-4e-db/issues/9: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:55:19,563 - WARNING - ⚠ Tentativo 2 fallito per https://github.com/Sheep-y/trpg-dnd-4e-db/issues/9: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:55:21,708 - ERROR - ✗ Errore definitivo per https://github.com/Sheep-y/trpg-dnd-4e-db/issues/9: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:55:22,848 - WARNING - ⚠ Tentativo 1 fallito per https://github.com/Sheep-y/trpg-dnd-4e-db/issues/12: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:55:23,995 - WARNING - ⚠ Tentativo 2 fallito per https://github.com/Sheep-y/trpg-dnd-4e-db/issues/12: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:55:26,147 - ERROR - ✗ Errore definitivo per https://github.com/Sheep-y/trpg-dnd-4e-db/issues/12: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:55:27,398 - WARNING - ⚠ Tentativo 1 fallito per https://github.com/Sheep-y/trpg-dnd-4e-db/commit/0fede587e31f7ec90f00e779f906822ddb3413a6#diff-49da3f7f21ed8673cfa993016bea63a7: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:55:28,545 - WARNING - ⚠ Tentativo 2 fallito per https://github.com/Sheep-y/trpg-dnd-4e-db/commit/0fede587e31f7ec90f00e779f906822ddb3413a6#diff-49da3f7f21ed8673cfa993016bea63a7: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:55:30,675 - ERROR - ✗ Errore definitivo per https://github.com/Sheep-y/trpg-dnd-4e-db/commit/0fede587e31f7ec90f00e779f906822ddb3413a6#diff-49da3f7f21ed8673cfa993016bea63a7: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:55:34,945 - INFO - Inizio download da: https://iws.mx/dnd/4e_database_files/
+2025-11-19 13:55:34,945 - INFO - Directory di output: /Users/dw/Git/ScrapingDnD/dnd_4e_database
+2025-11-19 13:55:36,907 - WARNING - ⚠ Tentativo 1 fallito per https://github.com/Sheep-y/trpg-dnd-4e-db/releases: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:55:38,065 - WARNING - ⚠ Tentativo 2 fallito per https://github.com/Sheep-y/trpg-dnd-4e-db/releases: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:55:40,208 - ERROR - ✗ Errore definitivo per https://github.com/Sheep-y/trpg-dnd-4e-db/releases: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:55:41,412 - WARNING - ⚠ Tentativo 1 fallito per https://github.com/Sheep-y/trpg-dnd-4e-db/issues: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:55:57,947 - INFO - Inizio download da: https://iws.mx/dnd/4e_database_files/
+2025-11-19 13:55:57,947 - INFO - Directory di output: /Users/dw/Git/ScrapingDnD/dnd_4e_database
+2025-11-19 13:56:00,152 - WARNING - ⚠ Tentativo 1 fallito per https://github.com/Sheep-y/trpg-dnd-4e-db/releases: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:56:01,325 - WARNING - ⚠ Tentativo 2 fallito per https://github.com/Sheep-y/trpg-dnd-4e-db/releases: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:56:03,507 - ERROR - ✗ Errore definitivo per https://github.com/Sheep-y/trpg-dnd-4e-db/releases: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:56:04,630 - WARNING - ⚠ Tentativo 1 fallito per https://github.com/Sheep-y/trpg-dnd-4e-db/issues: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:59:32,130 - INFO - Inizio download da: https://iws.mx/dnd/4e_database_files/
+2025-11-19 13:59:32,131 - INFO - Directory di output: /Users/dw/Git/ScrapingDnD/dnd_4e_database
+2025-11-19 13:59:33,804 - WARNING - ⚠ Tentativo 1 fallito per https://play.google.com/store/apps/details?id=com.android.chrome: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:59:35,004 - WARNING - ⚠ Tentativo 2 fallito per https://play.google.com/store/apps/details?id=com.android.chrome: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 13:59:58,479 - INFO - Inizio download da: https://iws.mx/dnd/4e_database_files/
+2025-11-19 13:59:58,479 - INFO - Directory di output: /Users/dw/Git/ScrapingDnD/dnd_4e_database
+2025-11-19 14:00:00,209 - WARNING - ⚠ Tentativo 1 fallito per https://www.youtube.com/watch?v=z-1_3VCEyG0: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:00:01,422 - WARNING - ⚠ Tentativo 2 fallito per https://www.youtube.com/watch?v=z-1_3VCEyG0: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:00:18,208 - INFO - Inizio download da: https://iws.mx/dnd/4e_database_files/
+2025-11-19 14:00:18,208 - INFO - Directory di output: /Users/dw/Git/ScrapingDnD/dnd_4e_database
+2025-11-19 14:00:19,741 - WARNING - ⚠ Tentativo 1 fallito per https://en.wikipedia.org/wiki/Bookmarklet: 403 Client Error: Forbidden for url: https://en.wikipedia.org/wiki/Bookmarklet
+2025-11-19 14:00:20,924 - WARNING - ⚠ Tentativo 2 fallito per https://en.wikipedia.org/wiki/Bookmarklet: 403 Client Error: Forbidden for url: https://en.wikipedia.org/wiki/Bookmarklet
+2025-11-19 14:00:41,358 - INFO - Inizio download da: https://iws.mx/dnd/4e_database_files/
+2025-11-19 14:00:41,358 - INFO - Directory di output: /Users/dw/Git/ScrapingDnD/dnd_4e_database
+2025-11-19 14:00:43,023 - WARNING - ⚠ Tentativo 1 fallito per http://www.wizards.com/default.asp?x=dnd/dnd/20030711x: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:00:44,322 - WARNING - ⚠ Tentativo 2 fallito per http://www.wizards.com/default.asp?x=dnd/dnd/20030711x: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:00:46,576 - ERROR - ✗ Errore definitivo per http://www.wizards.com/default.asp?x=dnd/dnd/20030711x: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:00:47,333 - WARNING - ⚠ Tentativo 1 fallito per http://en.wikipedia.org/wiki/Coral_Content_Distribution_Network: 403 Client Error: Forbidden for url: https://en.wikipedia.org/wiki/Coral_Content_Distribution_Network
+2025-11-19 14:00:48,593 - WARNING - ⚠ Tentativo 2 fallito per http://en.wikipedia.org/wiki/Coral_Content_Distribution_Network: 403 Client Error: Forbidden for url: https://en.wikipedia.org/wiki/Coral_Content_Distribution_Network
+2025-11-19 14:00:50,837 - ERROR - ✗ Errore definitivo per http://en.wikipedia.org/wiki/Coral_Content_Distribution_Network: 403 Client Error: Forbidden for url: https://en.wikipedia.org/wiki/Coral_Content_Distribution_Network
+2025-11-19 14:00:52,355 - WARNING - ⚠ Tentativo 1 fallito per http://jquerymobile.com/â: 404 Client Error: Not Found for url: https://jquerymobile.com/%C3%A2%C2%80%C2%8E
+2025-11-19 14:01:42,579 - INFO - Inizio download da: https://iws.mx/dnd/4e_database_files/
+2025-11-19 14:01:42,579 - INFO - Directory di output: /Users/dw/Git/ScrapingDnD/dnd_4e_database
+2025-11-19 14:01:44,260 - WARNING - ⚠ Tentativo 1 fallito per http://www.wizards.com/default.asp?x=dnd/dnd/20030711x: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:01:45,569 - WARNING - ⚠ Tentativo 2 fallito per http://www.wizards.com/default.asp?x=dnd/dnd/20030711x: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:01:47,896 - ERROR - ✗ Errore definitivo per http://www.wizards.com/default.asp?x=dnd/dnd/20030711x: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:01:50,169 - WARNING - ⚠ Tentativo 1 fallito per http://ails.deviantart.com/art/420-Pixel-Art-Icons-for-RPG-129892453: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:01:52,675 - WARNING - ⚠ Tentativo 2 fallito per http://ails.deviantart.com/art/420-Pixel-Art-Icons-for-RPG-129892453: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:01:56,318 - ERROR - ✗ Errore definitivo per http://ails.deviantart.com/art/420-Pixel-Art-Icons-for-RPG-129892453: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:01:57,142 - WARNING - ⚠ Tentativo 1 fallito per https://msdn.microsoft.com/library/dn423948(v=vs.85).aspx: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:01:58,398 - WARNING - ⚠ Tentativo 2 fallito per https://msdn.microsoft.com/library/dn423948(v=vs.85).aspx: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:00,624 - ERROR - ✗ Errore definitivo per https://msdn.microsoft.com/library/dn423948(v=vs.85).aspx: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:03,185 - WARNING - ⚠ Tentativo 1 fallito per http://www.enworld.org/forum/content.php?3087-4e-DnD-Insider-Moving: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:06,173 - WARNING - ⚠ Tentativo 2 fallito per http://www.enworld.org/forum/content.php?3087-4e-DnD-Insider-Moving: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:10,260 - ERROR - ✗ Errore definitivo per http://www.enworld.org/forum/content.php?3087-4e-DnD-Insider-Moving: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:11,005 - WARNING - ⚠ Tentativo 1 fallito per https://docs.oracle.com/javase/8/javafx/api/javafx/scene/web/WebEngine.html: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:12,154 - WARNING - ⚠ Tentativo 2 fallito per https://docs.oracle.com/javase/8/javafx/api/javafx/scene/web/WebEngine.html: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:14,298 - ERROR - ✗ Errore definitivo per https://docs.oracle.com/javase/8/javafx/api/javafx/scene/web/WebEngine.html: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:15,307 - WARNING - ⚠ Tentativo 1 fallito per https://youtu.be/aNDze9Ok5fE: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:16,728 - WARNING - ⚠ Tentativo 2 fallito per https://youtu.be/aNDze9Ok5fE: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:19,134 - ERROR - ✗ Errore definitivo per https://youtu.be/aNDze9Ok5fE: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:20,238 - WARNING - ⚠ Tentativo 1 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:21,887 - WARNING - ⚠ Tentativo 2 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:24,546 - ERROR - ✗ Errore definitivo per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:25,681 - WARNING - ⚠ Tentativo 1 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:27,247 - WARNING - ⚠ Tentativo 2 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:29,870 - ERROR - ✗ Errore definitivo per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:30,998 - WARNING - ⚠ Tentativo 1 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:32,645 - WARNING - ⚠ Tentativo 2 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:35,200 - ERROR - ✗ Errore definitivo per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:36,336 - WARNING - ⚠ Tentativo 1 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:37,971 - WARNING - ⚠ Tentativo 2 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:40,644 - ERROR - ✗ Errore definitivo per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:41,749 - WARNING - ⚠ Tentativo 1 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:43,397 - WARNING - ⚠ Tentativo 2 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:46,061 - ERROR - ✗ Errore definitivo per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:47,111 - WARNING - ⚠ Tentativo 1 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:48,737 - WARNING - ⚠ Tentativo 2 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:51,386 - ERROR - ✗ Errore definitivo per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:52,490 - WARNING - ⚠ Tentativo 1 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:54,064 - WARNING - ⚠ Tentativo 2 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:56,717 - ERROR - ✗ Errore definitivo per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:57,835 - WARNING - ⚠ Tentativo 1 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:02:59,491 - WARNING - ⚠ Tentativo 2 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:02,136 - ERROR - ✗ Errore definitivo per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:03,262 - WARNING - ⚠ Tentativo 1 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:04,850 - WARNING - ⚠ Tentativo 2 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:07,473 - ERROR - ✗ Errore definitivo per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:08,566 - WARNING - ⚠ Tentativo 1 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:10,230 - WARNING - ⚠ Tentativo 2 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:12,925 - ERROR - ✗ Errore definitivo per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:14,112 - WARNING - ⚠ Tentativo 1 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:15,748 - WARNING - ⚠ Tentativo 2 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:18,310 - ERROR - ✗ Errore definitivo per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:19,401 - WARNING - ⚠ Tentativo 1 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:21,074 - WARNING - ⚠ Tentativo 2 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:23,737 - ERROR - ✗ Errore definitivo per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:24,786 - WARNING - ⚠ Tentativo 1 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:26,338 - WARNING - ⚠ Tentativo 2 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:28,966 - ERROR - ✗ Errore definitivo per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:30,093 - WARNING - ⚠ Tentativo 1 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:31,687 - WARNING - ⚠ Tentativo 2 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:34,347 - ERROR - ✗ Errore definitivo per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:35,519 - WARNING - ⚠ Tentativo 1 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:37,138 - WARNING - ⚠ Tentativo 2 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:39,706 - ERROR - ✗ Errore definitivo per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:40,830 - WARNING - ⚠ Tentativo 1 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:42,374 - WARNING - ⚠ Tentativo 2 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:44,926 - ERROR - ✗ Errore definitivo per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:46,002 - WARNING - ⚠ Tentativo 1 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:47,562 - WARNING - ⚠ Tentativo 2 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:50,174 - ERROR - ✗ Errore definitivo per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:51,264 - WARNING - ⚠ Tentativo 1 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:52,820 - WARNING - ⚠ Tentativo 2 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:55,496 - ERROR - ✗ Errore definitivo per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:56,543 - WARNING - ⚠ Tentativo 1 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:03:58,137 - WARNING - ⚠ Tentativo 2 fallito per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:04:00,806 - ERROR - ✗ Errore definitivo per https://iws.mx/dnd/: [Errno 30] Read-only file system: '/dnd'
+2025-11-19 14:04:02,491 - INFO - ✓ ?C=N;O=D (660 bytes)
+2025-11-19 14:04:03,523 - INFO - ✓ ?C=M;O=A (676 bytes)
+2025-11-19 14:04:04,581 - INFO - ✓ ?C=S;O=A (662 bytes)
+2025-11-19 14:04:05,648 - INFO - ✓ ?C=D;O=A (672 bytes)
+2025-11-19 14:04:06,869 - INFO - ✓ _index.js (42448 bytes)
+2025-11-19 14:04:07,963 - INFO - ✓ _listing.js (8708 bytes)
+2025-11-19 14:04:09,098 - INFO - ✓ data0.js (4695 bytes)
+2025-11-19 14:04:10,210 - INFO - ✓ data1.js (6543 bytes)
+2025-11-19 14:04:11,350 - INFO - ✓ data2.js (4923 bytes)
+2025-11-19 14:04:12,419 - INFO - ✓ data3.js (4428 bytes)
+2025-11-19 14:04:13,479 - INFO - ✓ data4.js (5595 bytes)
+2025-11-19 14:04:14,562 - INFO - ✓ data5.js (6354 bytes)
+2025-11-19 14:04:15,768 - INFO - ✓ data6.js (5450 bytes)
+2025-11-19 14:04:16,845 - INFO - ✓ data7.js (4887 bytes)
+2025-11-19 14:04:18,000 - INFO - ✓ data8.js (4613 bytes)
+2025-11-19 14:04:19,139 - INFO - ✓ data9.js (4868 bytes)
+2025-11-19 14:04:20,249 - INFO - ✓ data10.js (4576 bytes)
+2025-11-19 14:04:21,336 - INFO - ✓ data11.js (5534 bytes)
+2025-11-19 14:04:22,387 - INFO - ✓ data12.js (6223 bytes)
+2025-11-19 14:04:23,526 - INFO - ✓ data13.js (4587 bytes)
+2025-11-19 14:04:24,662 - INFO - ✓ data14.js (5203 bytes)
+2025-11-19 14:04:25,779 - INFO - ✓ data15.js (5439 bytes)
+2025-11-19 14:04:26,903 - INFO - ✓ data16.js (4310 bytes)
+2025-11-19 14:04:27,974 - INFO - ✓ data17.js (6816 bytes)
+2025-11-19 14:04:29,051 - INFO - ✓ data18.js (3994 bytes)
+2025-11-19 14:04:30,195 - INFO - ✓ data19.js (6804 bytes)
+2025-11-19 14:04:31,925 - INFO - ✓ ?C=N;O=D (655 bytes)
+2025-11-19 14:04:33,064 - INFO - ✓ ?C=M;O=A (661 bytes)
+2025-11-19 14:04:34,142 - INFO - ✓ ?C=S;O=A (659 bytes)
+2025-11-19 14:04:35,204 - INFO - ✓ ?C=D;O=A (665 bytes)
+2025-11-19 14:04:36,747 - INFO - ✓ _index.js (0 bytes)
+2025-11-19 14:04:38,021 - INFO - ✓ _listing.js (17910 bytes)
+2025-11-19 14:04:39,097 - INFO - ✓ data0.js (11376 bytes)
+2025-11-19 14:04:40,220 - INFO - ✓ data1.js (10375 bytes)
+2025-11-19 14:04:41,358 - INFO - ✓ data2.js (12138 bytes)
+2025-11-19 14:04:42,469 - INFO - ✓ data3.js (11445 bytes)
+2025-11-19 14:04:43,610 - INFO - ✓ data4.js (11554 bytes)
+2025-11-19 14:04:44,685 - INFO - ✓ data5.js (11331 bytes)
+2025-11-19 14:04:45,867 - INFO - ✓ data6.js (11441 bytes)
+2025-11-19 14:04:46,992 - INFO - ✓ data7.js (12667 bytes)
+2025-11-19 14:04:48,074 - INFO - ✓ data8.js (11864 bytes)
+2025-11-19 14:04:49,125 - INFO - ✓ data9.js (11371 bytes)
+2025-11-19 14:04:50,158 - INFO - ✓ data10.js (12263 bytes)
+2025-11-19 14:04:51,284 - INFO - ✓ data11.js (11296 bytes)
+2025-11-19 14:04:52,420 - INFO - ✓ data12.js (11114 bytes)
+2025-11-19 14:04:53,490 - INFO - ✓ data13.js (11308 bytes)
+2025-11-19 14:04:54,539 - INFO - ✓ data14.js (12212 bytes)
+2025-11-19 14:04:55,691 - INFO - ✓ data15.js (11611 bytes)
+2025-11-19 14:04:56,736 - INFO - ✓ data16.js (11864 bytes)
+2025-11-19 14:04:57,839 - INFO - ✓ data17.js (11197 bytes)
+2025-11-19 14:04:58,968 - INFO - ✓ data18.js (11218 bytes)
+2025-11-19 14:05:00,032 - INFO - ✓ data19.js (11816 bytes)
+2025-11-19 14:05:01,736 - INFO - ✓ ?C=N;O=D (675 bytes)
+2025-11-19 14:05:02,812 - INFO - ✓ ?C=M;O=A (694 bytes)
+2025-11-19 14:05:03,986 - INFO - ✓ ?C=S;O=A (686 bytes)
+2025-11-19 14:05:05,069 - INFO - ✓ ?C=D;O=A (692 bytes)
+2025-11-19 14:05:06,624 - INFO - ✓ _index.js (0 bytes)
+2025-11-19 14:05:07,708 - INFO - ✓ _listing.js (1230 bytes)
+2025-11-19 14:05:08,892 - INFO - ✓ data0.js (4662 bytes)
+2025-11-19 14:05:10,069 - INFO - ✓ data1.js (14190 bytes)
+2025-11-19 14:05:11,277 - INFO - ✓ data2.js (26898 bytes)
+2025-11-19 14:05:12,487 - INFO - ✓ data3.js (16006 bytes)
+2025-11-19 14:05:13,727 - INFO - ✓ data4.js (20536 bytes)
+2025-11-19 14:05:14,926 - INFO - ✓ data5.js (26416 bytes)
+2025-11-19 14:05:16,208 - INFO - ✓ data6.js (15295 bytes)
+2025-11-19 14:05:17,415 - INFO - ✓ data7.js (19593 bytes)
+2025-11-19 14:05:18,571 - INFO - ✓ data8.js (21760 bytes)
+2025-11-19 14:05:19,893 - INFO - ✓ data9.js (17778 bytes)
+2025-11-19 14:05:20,975 - INFO - ✓ data10.js (8949 bytes)
+2025-11-19 14:05:22,108 - INFO - ✓ data11.js (9018 bytes)
+2025-11-19 14:05:23,239 - INFO - ✓ data12.js (6447 bytes)
+2025-11-19 14:05:24,510 - INFO - ✓ data13.js (27552 bytes)
+2025-11-19 14:05:25,574 - INFO - ✓ data14.js (7567 bytes)
+2025-11-19 14:05:26,708 - INFO - ✓ data15.js (4179 bytes)
+2025-11-19 14:05:27,756 - INFO - ✓ data16.js (11803 bytes)
+2025-11-19 14:05:28,814 - INFO - ✓ data17.js (11846 bytes)
+2025-11-19 14:05:30,002 - INFO - ✓ data18.js (3664 bytes)
+2025-11-19 14:05:31,196 - INFO - ✓ data19.js (17095 bytes)
+2025-11-19 14:05:32,853 - INFO - ✓ ?C=N;O=D (656 bytes)
+2025-11-19 14:05:33,925 - INFO - ✓ ?C=M;O=A (669 bytes)
+2025-11-19 14:05:35,002 - INFO - ✓ ?C=S;O=A (666 bytes)
+2025-11-19 14:05:36,120 - INFO - ✓ ?C=D;O=A (669 bytes)
+2025-11-19 14:05:37,400 - INFO - ✓ _index.js (28815 bytes)
+2025-11-19 14:05:38,497 - INFO - ✓ _listing.js (3068 bytes)
+2025-11-19 14:05:39,612 - INFO - ✓ data0.js (2893 bytes)
+2025-11-19 14:05:40,694 - INFO - ✓ data1.js (3075 bytes)
+2025-11-19 14:05:41,883 - INFO - ✓ data2.js (2988 bytes)
+2025-11-19 14:05:43,004 - INFO - ✓ data3.js (2762 bytes)
+2025-11-19 14:05:44,121 - INFO - ✓ data4.js (2933 bytes)
+2025-11-19 14:05:45,257 - INFO - ✓ data5.js (3315 bytes)
+2025-11-19 14:05:46,380 - INFO - ✓ data6.js (3373 bytes)
+2025-11-19 14:05:47,512 - INFO - ✓ data7.js (3300 bytes)
+2025-11-19 14:05:48,593 - INFO - ✓ data8.js (3023 bytes)
+2025-11-19 14:05:49,640 - INFO - ✓ data9.js (3171 bytes)
+2025-11-19 14:05:50,754 - INFO - ✓ data10.js (3101 bytes)
+2025-11-19 14:05:51,821 - INFO - ✓ data11.js (3187 bytes)
+2025-11-19 14:05:52,879 - INFO - ✓ data12.js (3142 bytes)
+2025-11-19 14:05:54,060 - INFO - ✓ data13.js (3091 bytes)
+2025-11-19 14:05:55,189 - INFO - ✓ data14.js (3709 bytes)
+2025-11-19 14:05:56,253 - INFO - ✓ data15.js (3030 bytes)
+2025-11-19 14:05:57,321 - INFO - ✓ data16.js (2701 bytes)
+2025-11-19 14:05:58,463 - INFO - ✓ data17.js (2570 bytes)
+2025-11-19 14:05:59,625 - INFO - ✓ data18.js (3243 bytes)
+2025-11-19 14:06:00,801 - INFO - ✓ data19.js (2804 bytes)
+2025-11-19 14:06:02,567 - INFO - ✓ ?C=N;O=D (664 bytes)
+2025-11-19 14:06:03,683 - INFO - ✓ ?C=M;O=A (686 bytes)
+2025-11-19 14:06:04,735 - INFO - ✓ ?C=S;O=A (670 bytes)
+2025-11-19 14:06:05,777 - INFO - ✓ ?C=D;O=A (686 bytes)
+2025-11-19 14:06:06,952 - INFO - ✓ _index.js (37846 bytes)
+2025-11-19 14:06:08,094 - INFO - ✓ _listing.js (2207 bytes)
+2025-11-19 14:06:09,155 - INFO - ✓ data0.js (2476 bytes)
+2025-11-19 14:06:10,186 - INFO - ✓ data1.js (2706 bytes)
+2025-11-19 14:06:11,364 - INFO - ✓ data2.js (2658 bytes)
+2025-11-19 14:06:12,488 - INFO - ✓ data3.js (2038 bytes)
+2025-11-19 14:06:13,560 - INFO - ✓ data4.js (3505 bytes)
+2025-11-19 14:06:14,635 - INFO - ✓ data5.js (3911 bytes)
+2025-11-19 14:06:15,677 - INFO - ✓ data6.js (2878 bytes)
+2025-11-19 14:06:16,773 - INFO - ✓ data7.js (4242 bytes)
+2025-11-19 14:06:17,835 - INFO - ✓ data8.js (4328 bytes)
+2025-11-19 14:06:18,884 - INFO - ✓ data9.js (3943 bytes)
+2025-11-19 14:06:20,023 - INFO - ✓ data10.js (3214 bytes)
+2025-11-19 14:06:21,125 - INFO - ✓ data11.js (3247 bytes)
+2025-11-19 14:06:22,194 - INFO - ✓ data12.js (2081 bytes)
+2025-11-19 14:06:23,246 - INFO - ✓ data13.js (2671 bytes)
+2025-11-19 14:06:24,298 - INFO - ✓ data14.js (2897 bytes)
+2025-11-19 14:06:25,392 - INFO - ✓ data15.js (2740 bytes)
+2025-11-19 14:06:26,515 - INFO - ✓ data16.js (2697 bytes)
+2025-11-19 14:06:27,647 - INFO - ✓ data17.js (2058 bytes)
+2025-11-19 14:06:28,768 - INFO - ✓ data18.js (2859 bytes)
+2025-11-19 14:06:29,850 - INFO - ✓ data19.js (2682 bytes)
+2025-11-19 14:06:31,630 - INFO - ✓ ?C=N;O=D (673 bytes)
+2025-11-19 14:06:32,766 - INFO - ✓ ?C=M;O=A (682 bytes)
+2025-11-19 14:06:33,875 - INFO - ✓ ?C=S;O=A (682 bytes)
+2025-11-19 14:06:35,008 - INFO - ✓ ?C=D;O=A (685 bytes)
+2025-11-19 14:06:36,180 - INFO - ✓ _index.js (8887 bytes)
+2025-11-19 14:06:37,240 - INFO - ✓ _listing.js (1304 bytes)
+2025-11-19 14:06:38,386 - INFO - ✓ data0.js (1437 bytes)
+2025-11-19 14:06:39,522 - INFO - ✓ data1.js (1335 bytes)
+2025-11-19 14:06:40,653 - INFO - ✓ data2.js (1268 bytes)
+2025-11-19 14:06:41,712 - INFO - ✓ data3.js (1062 bytes)
+2025-11-19 14:06:42,789 - INFO - ✓ data4.js (1251 bytes)
+2025-11-19 14:06:43,933 - INFO - ✓ data5.js (1442 bytes)
+2025-11-19 14:06:44,998 - INFO - ✓ data6.js (1400 bytes)
+2025-11-19 14:06:46,175 - INFO - ✓ data7.js (902 bytes)
+2025-11-19 14:06:47,232 - INFO - ✓ data8.js (663 bytes)
+2025-11-19 14:06:48,310 - INFO - ✓ data9.js (565 bytes)
+2025-11-19 14:06:49,435 - INFO - ✓ data10.js (1262 bytes)
+2025-11-19 14:06:50,501 - INFO - ✓ data11.js (1605 bytes)
+2025-11-19 14:06:51,717 - INFO - ✓ data12.js (711 bytes)
+2025-11-19 14:06:52,778 - INFO - ✓ data13.js (1528 bytes)
+2025-11-19 14:06:53,950 - INFO - ✓ data14.js (1694 bytes)
+2025-11-19 14:06:55,083 - INFO - ✓ data15.js (1294 bytes)
+2025-11-19 14:06:56,220 - INFO - ✓ data16.js (1466 bytes)
+2025-11-19 14:06:57,338 - INFO - ✓ data17.js (1175 bytes)
+2025-11-19 14:06:58,455 - INFO - ✓ data18.js (1378 bytes)
+2025-11-19 14:06:59,588 - INFO - ✓ data19.js (1229 bytes)
+2025-11-19 14:07:01,336 - INFO - ✓ ?C=N;O=D (668 bytes)
+2025-11-19 14:07:02,448 - INFO - ✓ ?C=M;O=A (686 bytes)
+2025-11-19 14:07:03,588 - INFO - ✓ ?C=S;O=A (672 bytes)
+2025-11-19 14:07:04,648 - INFO - ✓ ?C=D;O=A (686 bytes)
+2025-11-19 14:07:06,063 - INFO - ✓ _index.js (0 bytes)
+2025-11-19 14:07:07,167 - INFO - ✓ _listing.js (2528 bytes)
+2025-11-19 14:07:08,230 - INFO - ✓ data0.js (6757 bytes)
+2025-11-19 14:07:09,319 - INFO - ✓ data1.js (7296 bytes)
+2025-11-19 14:07:10,457 - INFO - ✓ data2.js (9065 bytes)
+2025-11-19 14:07:11,571 - INFO - ✓ data3.js (11154 bytes)
+2025-11-19 14:07:12,693 - INFO - ✓ data4.js (10306 bytes)
+2025-11-19 14:07:13,764 - INFO - ✓ data5.js (9588 bytes)
+2025-11-19 14:07:14,839 - INFO - ✓ data6.js (10966 bytes)
+2025-11-19 14:07:15,980 - INFO - ✓ data7.js (8393 bytes)
+2025-11-19 14:07:17,102 - INFO - ✓ data8.js (8122 bytes)
+2025-11-19 14:07:18,240 - INFO - ✓ data9.js (12000 bytes)
+2025-11-19 14:07:19,285 - INFO - ✓ data10.js (9095 bytes)
+2025-11-19 14:07:20,350 - INFO - ✓ data11.js (7514 bytes)
+2025-11-19 14:07:21,382 - INFO - ✓ data12.js (7965 bytes)
+2025-11-19 14:07:22,532 - INFO - ✓ data13.js (10256 bytes)
+2025-11-19 14:07:23,663 - INFO - ✓ data14.js (9572 bytes)
+2025-11-19 14:07:24,873 - INFO - ✓ data15.js (4562 bytes)
+2025-11-19 14:07:26,008 - INFO - ✓ data16.js (11170 bytes)
+2025-11-19 14:07:27,142 - INFO - ✓ data17.js (9475 bytes)
+2025-11-19 14:07:28,261 - INFO - ✓ data18.js (10287 bytes)
+2025-11-19 14:07:29,392 - INFO - ✓ data19.js (8221 bytes)
+2025-11-19 14:07:31,129 - INFO - ✓ ?C=N;O=D (649 bytes)
+2025-11-19 14:07:32,348 - INFO - ✓ ?C=M;O=A (670 bytes)
+2025-11-19 14:07:33,585 - INFO - ✓ ?C=S;O=A (655 bytes)
+2025-11-19 14:07:34,719 - INFO - ✓ ?C=D;O=A (668 bytes)
+2025-11-19 14:07:36,277 - INFO - ✓ _index.js (0 bytes)
+2025-11-19 14:07:37,762 - INFO - ✓ _listing.js (0 bytes)
+2025-11-19 14:07:39,042 - INFO - ✓ data0.js (16482 bytes)
+2025-11-19 14:07:40,264 - INFO - ✓ data1.js (15533 bytes)
+2025-11-19 14:07:41,497 - INFO - ✓ data2.js (15912 bytes)
+2025-11-19 14:07:42,719 - INFO - ✓ data3.js (16577 bytes)
+2025-11-19 14:07:43,950 - INFO - ✓ data4.js (16408 bytes)
+2025-11-19 14:07:45,190 - INFO - ✓ data5.js (17252 bytes)
+2025-11-19 14:07:46,408 - INFO - ✓ data6.js (16865 bytes)
+2025-11-19 14:07:47,644 - INFO - ✓ data7.js (18224 bytes)
+2025-11-19 14:07:48,871 - INFO - ✓ data8.js (18153 bytes)
+2025-11-19 14:07:50,083 - INFO - ✓ data9.js (17095 bytes)
+2025-11-19 14:07:51,319 - INFO - ✓ data10.js (16328 bytes)
+2025-11-19 14:07:52,565 - INFO - ✓ data11.js (16843 bytes)
+2025-11-19 14:07:53,740 - INFO - ✓ data12.js (16242 bytes)
+2025-11-19 14:07:55,005 - INFO - ✓ data13.js (15727 bytes)
+2025-11-19 14:07:56,246 - INFO - ✓ data14.js (16462 bytes)
+2025-11-19 14:07:57,428 - INFO - ✓ data15.js (16563 bytes)
+2025-11-19 14:07:58,691 - INFO - ✓ data16.js (16417 bytes)
+2025-11-19 14:07:59,941 - INFO - ✓ data17.js (15824 bytes)
+2025-11-19 14:08:01,158 - INFO - ✓ data18.js (15501 bytes)
+2025-11-19 14:08:02,380 - INFO - ✓ data19.js (16031 bytes)
+2025-11-19 14:08:04,100 - INFO - ✓ ?C=N;O=D (665 bytes)
+2025-11-19 14:08:05,175 - INFO - ✓ ?C=M;O=A (683 bytes)
+2025-11-19 14:08:06,364 - INFO - ✓ ?C=S;O=A (673 bytes)
+2025-11-19 14:08:07,511 - INFO - ✓ ?C=D;O=A (680 bytes)
+2025-11-19 14:08:09,009 - INFO - ✓ _index.js (0 bytes)
+2025-11-19 14:08:10,057 - INFO - ✓ _listing.js (5865 bytes)
+2025-11-19 14:08:11,124 - INFO - ✓ data0.js (7073 bytes)
+2025-11-19 14:08:12,212 - INFO - ✓ data1.js (10324 bytes)
+2025-11-19 14:08:13,256 - INFO - ✓ data2.js (10382 bytes)
+2025-11-19 14:08:14,287 - INFO - ✓ data3.js (8061 bytes)
+2025-11-19 14:08:15,366 - INFO - ✓ data4.js (5693 bytes)
+2025-11-19 14:08:16,517 - INFO - ✓ data5.js (6120 bytes)
+2025-11-19 14:08:17,564 - INFO - ✓ data6.js (5419 bytes)
+2025-11-19 14:08:18,773 - INFO - ✓ data7.js (10887 bytes)
+2025-11-19 14:08:19,883 - INFO - ✓ data8.js (7723 bytes)
+2025-11-19 14:08:20,906 - INFO - ✓ data9.js (9464 bytes)
+2025-11-19 14:08:21,956 - INFO - ✓ data10.js (8749 bytes)
+2025-11-19 14:08:22,995 - INFO - ✓ data11.js (5805 bytes)
+2025-11-19 14:08:24,068 - INFO - ✓ data12.js (6318 bytes)
+2025-11-19 14:08:25,140 - INFO - ✓ data13.js (9568 bytes)
+2025-11-19 14:08:26,217 - INFO - ✓ data14.js (7609 bytes)
+2025-11-19 14:08:27,364 - INFO - ✓ data15.js (7081 bytes)
+2025-11-19 14:08:28,453 - INFO - ✓ data16.js (10144 bytes)
+2025-11-19 14:08:29,604 - INFO - ✓ data17.js (7102 bytes)
+2025-11-19 14:08:30,735 - INFO - ✓ data18.js (6338 bytes)
+2025-11-19 14:08:31,856 - INFO - ✓ data19.js (5424 bytes)
+2025-11-19 14:08:33,601 - INFO - ✓ ?C=N;O=D (673 bytes)
+2025-11-19 14:08:34,668 - INFO - ✓ ?C=M;O=A (693 bytes)
+2025-11-19 14:08:35,768 - INFO - ✓ ?C=S;O=A (685 bytes)
+2025-11-19 14:08:36,871 - INFO - ✓ ?C=D;O=A (690 bytes)
+2025-11-19 14:08:38,381 - INFO - ✓ _index.js (0 bytes)
+2025-11-19 14:08:39,535 - INFO - ✓ _listing.js (11988 bytes)
+2025-11-19 14:08:40,778 - INFO - ✓ data0.js (12831 bytes)
+2025-11-19 14:08:41,892 - INFO - ✓ data1.js (5279 bytes)
+2025-11-19 14:08:43,014 - INFO - ✓ data2.js (6707 bytes)
+2025-11-19 14:08:44,263 - INFO - ✓ data3.js (16244 bytes)
+2025-11-19 14:08:45,497 - INFO - ✓ data4.js (16296 bytes)
+2025-11-19 14:08:46,570 - INFO - ✓ data5.js (10040 bytes)
+2025-11-19 14:08:47,725 - INFO - ✓ data6.js (7901 bytes)
+2025-11-19 14:08:48,793 - INFO - ✓ data7.js (11645 bytes)
+2025-11-19 14:08:49,965 - INFO - ✓ data8.js (9023 bytes)
+2025-11-19 14:08:51,107 - INFO - ✓ data9.js (10929 bytes)
+2025-11-19 14:08:52,288 - INFO - ✓ data10.js (6292 bytes)
+2025-11-19 14:08:53,503 - INFO - ✓ data11.js (8681 bytes)
+2025-11-19 14:08:54,567 - INFO - ✓ data12.js (11575 bytes)
+2025-11-19 14:08:55,737 - INFO - ✓ data13.js (10086 bytes)
+2025-11-19 14:08:56,769 - INFO - ✓ data14.js (8859 bytes)
+2025-11-19 14:08:57,862 - INFO - ✓ data15.js (10713 bytes)
+2025-11-19 14:08:58,994 - INFO - ✓ data16.js (9552 bytes)
+2025-11-19 14:09:00,105 - INFO - ✓ data17.js (6379 bytes)
+2025-11-19 14:09:01,172 - INFO - ✓ data18.js (10633 bytes)
+2025-11-19 14:09:02,268 - INFO - ✓ data19.js (7302 bytes)
+2025-11-19 14:09:03,910 - INFO - ✓ ?C=N;O=D (670 bytes)
+2025-11-19 14:09:05,040 - INFO - ✓ ?C=M;O=A (690 bytes)
+2025-11-19 14:09:06,080 - INFO - ✓ ?C=S;O=A (676 bytes)
+2025-11-19 14:09:07,134 - INFO - ✓ ?C=D;O=A (683 bytes)
+2025-11-19 14:09:08,826 - INFO - ✓ _index.js (0 bytes)
+2025-11-19 14:09:10,073 - INFO - ✓ _listing.js (37614 bytes)
+2025-11-19 14:09:11,243 - INFO - ✓ data0.js (22862 bytes)
+2025-11-19 14:09:12,425 - INFO - ✓ data1.js (25730 bytes)
+2025-11-19 14:09:13,609 - INFO - ✓ data2.js (26960 bytes)
+2025-11-19 14:09:14,873 - INFO - ✓ data3.js (28838 bytes)
+2025-11-19 14:09:16,101 - INFO - ✓ data4.js (27063 bytes)
+2025-11-19 14:09:17,276 - INFO - ✓ data5.js (24034 bytes)
+2025-11-19 14:09:18,581 - INFO - ✓ data6.js (23237 bytes)
+2025-11-19 14:09:19,770 - INFO - ✓ data7.js (20701 bytes)
+2025-11-19 14:09:21,050 - INFO - ✓ data8.js (22319 bytes)
+2025-11-19 14:09:22,229 - INFO - ✓ data9.js (25228 bytes)
+2025-11-19 14:09:23,497 - INFO - ✓ data10.js (25760 bytes)
+2025-11-19 14:09:24,739 - INFO - ✓ data11.js (27316 bytes)
+2025-11-19 14:09:26,059 - INFO - ✓ data12.js (21737 bytes)
+2025-11-19 14:09:27,238 - INFO - ✓ data13.js (28206 bytes)
+2025-11-19 14:09:28,427 - INFO - ✓ data14.js (25884 bytes)
+2025-11-19 14:09:29,657 - INFO - ✓ data15.js (23460 bytes)
+2025-11-19 14:09:31,142 - INFO - ✓ data16.js (25189 bytes)
+2025-11-19 14:09:32,505 - INFO - ✓ data17.js (28714 bytes)
+2025-11-19 14:09:33,685 - INFO - ✓ data18.js (25359 bytes)
+2025-11-19 14:09:34,948 - INFO - ✓ data19.js (25204 bytes)
+2025-11-19 14:09:36,683 - INFO - ✓ ?C=N;O=D (670 bytes)
+2025-11-19 14:09:37,804 - INFO - ✓ ?C=M;O=A (687 bytes)
+2025-11-19 14:09:38,923 - INFO - ✓ ?C=S;O=A (683 bytes)
+2025-11-19 14:09:40,002 - INFO - ✓ ?C=D;O=A (682 bytes)
+2025-11-19 14:09:41,997 - INFO - ✓ _index.js (0 bytes)
+2025-11-19 14:09:43,503 - INFO - ✓ _listing.js (0 bytes)
+2025-11-19 14:09:45,066 - INFO - ✓ data0.js (0 bytes)
+2025-11-19 14:09:46,610 - INFO - ✓ data1.js (0 bytes)
+2025-11-19 14:09:48,090 - INFO - ✓ data2.js (0 bytes)
+2025-11-19 14:09:49,488 - INFO - ✓ data3.js (0 bytes)
+2025-11-19 14:09:51,015 - INFO - ✓ data4.js (0 bytes)
+2025-11-19 14:09:52,524 - INFO - ✓ data5.js (0 bytes)
+2025-11-19 14:09:53,929 - INFO - ✓ data6.js (0 bytes)
+2025-11-19 14:09:55,491 - INFO - ✓ data7.js (0 bytes)
+2025-11-19 14:09:56,936 - INFO - ✓ data8.js (0 bytes)
+2025-11-19 14:09:58,363 - INFO - ✓ data9.js (0 bytes)
+2025-11-19 14:09:59,838 - INFO - ✓ data10.js (0 bytes)
+2025-11-19 14:10:01,288 - INFO - ✓ data11.js (0 bytes)
+2025-11-19 14:10:02,716 - INFO - ✓ data12.js (0 bytes)
+2025-11-19 14:10:04,206 - INFO - ✓ data13.js (0 bytes)
+2025-11-19 14:10:06,158 - INFO - ✓ data14.js (0 bytes)
+2025-11-19 14:10:07,592 - INFO - ✓ data15.js (0 bytes)
+2025-11-19 14:10:09,008 - INFO - ✓ data16.js (0 bytes)
+2025-11-19 14:10:10,492 - INFO - ✓ data17.js (0 bytes)
+2025-11-19 14:10:11,995 - INFO - ✓ data18.js (0 bytes)
+2025-11-19 14:10:13,488 - INFO - ✓ data19.js (0 bytes)
+2025-11-19 14:10:15,234 - INFO - ✓ ?C=N;O=D (676 bytes)
+2025-11-19 14:10:16,404 - INFO - ✓ ?C=M;O=A (685 bytes)
+2025-11-19 14:10:17,458 - INFO - ✓ ?C=S;O=A (685 bytes)
+2025-11-19 14:10:18,551 - INFO - ✓ ?C=D;O=A (685 bytes)
+2025-11-19 14:10:20,364 - INFO - ✓ _index.js (0 bytes)
+2025-11-19 14:10:21,532 - INFO - ✓ _listing.js (11658 bytes)
+2025-11-19 14:10:22,998 - INFO - ✓ data0.js (32071 bytes)
+2025-11-19 14:10:24,229 - INFO - ✓ data1.js (34166 bytes)
+2025-11-19 14:10:25,550 - INFO - ✓ data2.js (29199 bytes)
+2025-11-19 14:10:26,771 - INFO - ✓ data3.js (29769 bytes)
+2025-11-19 14:10:27,967 - INFO - ✓ data4.js (32937 bytes)
+2025-11-19 14:10:29,125 - INFO - ✓ data5.js (31074 bytes)
+2025-11-19 14:10:30,374 - INFO - ✓ data6.js (30744 bytes)
+2025-11-19 14:10:31,583 - INFO - ✓ data7.js (33557 bytes)
+2025-11-19 14:10:32,833 - INFO - ✓ data8.js (35684 bytes)
+2025-11-19 14:10:34,159 - INFO - ✓ data9.js (30316 bytes)
+2025-11-19 14:10:35,376 - INFO - ✓ data10.js (38358 bytes)
+2025-11-19 14:10:36,604 - INFO - ✓ data11.js (36104 bytes)
+2025-11-19 14:10:37,839 - INFO - ✓ data12.js (34566 bytes)
+2025-11-19 14:10:39,070 - INFO - ✓ data13.js (31633 bytes)
+2025-11-19 14:10:40,303 - INFO - ✓ data14.js (35961 bytes)
+2025-11-19 14:10:41,631 - INFO - ✓ data15.js (28825 bytes)
+2025-11-19 14:10:42,805 - INFO - ✓ data16.js (33422 bytes)
+2025-11-19 14:10:43,993 - INFO - ✓ data17.js (29166 bytes)
+2025-11-19 14:10:45,210 - INFO - ✓ data18.js (31427 bytes)
+2025-11-19 14:10:46,431 - INFO - ✓ data19.js (29621 bytes)
+2025-11-19 14:10:48,098 - INFO - ✓ ?C=N;O=D (677 bytes)
+2025-11-19 14:10:49,145 - INFO - ✓ ?C=M;O=A (689 bytes)
+2025-11-19 14:10:50,195 - INFO - ✓ ?C=S;O=A (683 bytes)
+2025-11-19 14:10:51,273 - INFO - ✓ ?C=D;O=A (689 bytes)
+2025-11-19 14:10:52,308 - INFO - ✓ _index.js (5468 bytes)
+2025-11-19 14:10:53,464 - INFO - ✓ _listing.js (751 bytes)
+2025-11-19 14:10:54,595 - INFO - ✓ data1.js (802 bytes)
+2025-11-19 14:10:55,735 - INFO - ✓ data2.js (1176 bytes)
+2025-11-19 14:10:56,820 - INFO - ✓ data3.js (1221 bytes)
+2025-11-19 14:10:58,010 - INFO - ✓ data4.js (1166 bytes)
+2025-11-19 14:10:59,089 - INFO - ✓ data5.js (1415 bytes)
+2025-11-19 14:11:00,141 - INFO - ✓ data6.js (930 bytes)
+2025-11-19 14:11:01,266 - INFO - ✓ data7.js (439 bytes)
+2025-11-19 14:11:02,376 - INFO - ✓ data8.js (1197 bytes)
+2025-11-19 14:11:03,502 - INFO - ✓ data9.js (785 bytes)
+2025-11-19 14:11:04,671 - INFO - ✓ data10.js (909 bytes)
+2025-11-19 14:11:05,736 - INFO - ✓ data11.js (563 bytes)
+2025-11-19 14:11:06,794 - INFO - ✓ data12.js (374 bytes)
+2025-11-19 14:11:07,865 - INFO - ✓ data13.js (340 bytes)
+2025-11-19 14:11:09,041 - INFO - ✓ data14.js (945 bytes)
+2025-11-19 14:11:10,171 - INFO - ✓ data15.js (1325 bytes)
+2025-11-19 14:11:11,287 - INFO - ✓ data16.js (385 bytes)
+2025-11-19 14:11:12,419 - INFO - ✓ data17.js (521 bytes)
+2025-11-19 14:11:13,539 - INFO - ✓ data18.js (647 bytes)
+2025-11-19 14:11:14,666 - INFO - ✓ data19.js (1042 bytes)
+2025-11-19 14:11:16,281 - INFO - ✓ ?C=N;O=D (660 bytes)
+2025-11-19 14:11:17,322 - INFO - ✓ ?C=M;O=A (679 bytes)
+2025-11-19 14:11:18,385 - INFO - ✓ ?C=S;O=A (668 bytes)
+2025-11-19 14:11:19,462 - INFO - ✓ ?C=D;O=A (675 bytes)
+2025-11-19 14:11:21,311 - INFO - ✓ _index.js (0 bytes)
+2025-11-19 14:11:22,881 - INFO - ✓ _listing.js (0 bytes)
+2025-11-19 14:11:24,256 - INFO - ✓ data0.js (0 bytes)
+2025-11-19 14:11:25,679 - INFO - ✓ data1.js (0 bytes)
+2025-11-19 14:11:27,023 - INFO - ✓ data2.js (0 bytes)
+2025-11-19 14:11:28,435 - INFO - ✓ data3.js (0 bytes)
+2025-11-19 14:11:29,799 - INFO - ✓ data4.js (0 bytes)
+2025-11-19 14:11:31,194 - INFO - ✓ data5.js (0 bytes)
+2025-11-19 14:11:32,562 - INFO - ✓ data6.js (0 bytes)
+2025-11-19 14:11:33,996 - INFO - ✓ data7.js (0 bytes)
+2025-11-19 14:11:35,317 - INFO - ✓ data8.js (0 bytes)
+2025-11-19 14:11:36,774 - INFO - ✓ data9.js (0 bytes)
+2025-11-19 14:11:38,261 - INFO - ✓ data10.js (0 bytes)
+2025-11-19 14:11:39,616 - INFO - ✓ data11.js (0 bytes)
+2025-11-19 14:11:40,943 - INFO - ✓ data12.js (0 bytes)
+2025-11-19 14:11:42,374 - INFO - ✓ data13.js (0 bytes)
+2025-11-19 14:11:43,805 - INFO - ✓ data14.js (0 bytes)
+2025-11-19 14:11:45,149 - INFO - ✓ data15.js (0 bytes)
+2025-11-19 14:11:46,576 - INFO - ✓ data16.js (0 bytes)
+2025-11-19 14:11:48,015 - INFO - ✓ data17.js (0 bytes)
+2025-11-19 14:11:49,460 - INFO - ✓ data18.js (0 bytes)
+2025-11-19 14:11:50,874 - INFO - ✓ data19.js (0 bytes)
+2025-11-19 14:11:52,654 - INFO - ✓ ?C=N;O=D (678 bytes)
+2025-11-19 14:11:53,698 - INFO - ✓ ?C=M;O=A (690 bytes)
+2025-11-19 14:11:54,813 - INFO - ✓ ?C=S;O=A (678 bytes)
+2025-11-19 14:11:55,943 - INFO - ✓ ?C=D;O=A (687 bytes)
+2025-11-19 14:11:57,308 - INFO - ✓ _index.js (0 bytes)
+2025-11-19 14:11:58,387 - INFO - ✓ _listing.js (1100 bytes)
+2025-11-19 14:11:59,516 - INFO - ✓ data0.js (5777 bytes)
+2025-11-19 14:12:00,663 - INFO - ✓ data1.js (9659 bytes)
+2025-11-19 14:12:01,778 - INFO - ✓ data2.js (6563 bytes)
+2025-11-19 14:12:02,896 - INFO - ✓ data3.js (7833 bytes)
+2025-11-19 14:12:03,942 - INFO - ✓ data4.js (9021 bytes)
+2025-11-19 14:12:04,975 - INFO - ✓ data5.js (6119 bytes)
+2025-11-19 14:12:06,043 - INFO - ✓ data6.js (10525 bytes)
+2025-11-19 14:12:07,103 - INFO - ✓ data7.js (8360 bytes)
+2025-11-19 14:12:08,228 - INFO - ✓ data8.js (6132 bytes)
+2025-11-19 14:12:09,350 - INFO - ✓ data9.js (4884 bytes)
+2025-11-19 14:12:10,503 - INFO - ✓ data10.js (5027 bytes)
+2025-11-19 14:12:11,577 - INFO - ✓ data11.js (3412 bytes)
+2025-11-19 14:12:12,662 - INFO - ✓ data12.js (2337 bytes)
+2025-11-19 14:12:13,872 - INFO - ✓ data13.js (8369 bytes)
+2025-11-19 14:12:14,977 - INFO - ✓ data14.js (4022 bytes)
+2025-11-19 14:12:16,097 - INFO - ✓ data15.js (4149 bytes)
+2025-11-19 14:12:17,242 - INFO - ✓ data16.js (5499 bytes)
+2025-11-19 14:12:18,323 - INFO - ✓ data17.js (4248 bytes)
+2025-11-19 14:12:19,485 - INFO - ✓ data18.js (6138 bytes)
+2025-11-19 14:12:20,528 - INFO - ✓ data19.js (3752 bytes)
+2025-11-19 14:12:22,256 - INFO - ✓ ?C=N;O=D (566 bytes)
+2025-11-19 14:12:23,385 - INFO - ✓ ?C=M;O=A (571 bytes)
+2025-11-19 14:12:24,516 - INFO - ✓ ?C=S;O=A (569 bytes)
+2025-11-19 14:12:25,574 - INFO - ✓ ?C=D;O=A (571 bytes)
+2025-11-19 14:12:26,652 - INFO - ✓ icon.png (11090 bytes)
+2025-11-19 14:12:27,798 - INFO - ✓ manifest.json (384 bytes)
+2025-11-19 14:12:29,047 - INFO - ✓ script.js (22148 bytes)
+2025-11-19 14:12:30,144 - INFO - ✓ style.css (1338 bytes)
+2025-11-19 14:12:31,228 - INFO - ✓ viewer_category_icon.png (5045 bytes)
+2025-11-19 14:12:33,003 - INFO - ✓ ?C=N;O=D (661 bytes)
+2025-11-19 14:12:34,134 - INFO - ✓ ?C=M;O=A (676 bytes)
+2025-11-19 14:12:35,261 - INFO - ✓ ?C=S;O=A (664 bytes)
+2025-11-19 14:12:36,392 - INFO - ✓ ?C=D;O=A (677 bytes)
+2025-11-19 14:12:37,812 - INFO - ✓ _index.js (0 bytes)
+2025-11-19 14:12:38,949 - INFO - ✓ _listing.js (7669 bytes)
+2025-11-19 14:12:40,110 - INFO - ✓ data0.js (8304 bytes)
+2025-11-19 14:12:41,334 - INFO - ✓ data1.js (8423 bytes)
+2025-11-19 14:12:42,529 - INFO - ✓ data2.js (8693 bytes)
+2025-11-19 14:12:43,663 - INFO - ✓ data3.js (7525 bytes)
+2025-11-19 14:12:44,791 - INFO - ✓ data4.js (7845 bytes)
+2025-11-19 14:12:45,908 - INFO - ✓ data5.js (6350 bytes)
+2025-11-19 14:12:47,023 - INFO - ✓ data6.js (7203 bytes)
+2025-11-19 14:12:48,159 - INFO - ✓ data7.js (6306 bytes)
+2025-11-19 14:12:49,213 - INFO - ✓ data8.js (6916 bytes)
+2025-11-19 14:12:50,257 - INFO - ✓ data9.js (6465 bytes)
+2025-11-19 14:12:51,442 - INFO - ✓ data10.js (6598 bytes)
+2025-11-19 14:12:52,503 - INFO - ✓ data11.js (7577 bytes)
+2025-11-19 14:12:53,556 - INFO - ✓ data12.js (7985 bytes)
+2025-11-19 14:12:54,631 - INFO - ✓ data13.js (5664 bytes)
+2025-11-19 14:12:55,654 - INFO - ✓ data14.js (8522 bytes)
+2025-11-19 14:12:56,693 - INFO - ✓ data15.js (7634 bytes)
+2025-11-19 14:12:57,774 - INFO - ✓ data16.js (7262 bytes)
+2025-11-19 14:12:58,832 - INFO - ✓ data17.js (6851 bytes)
+2025-11-19 14:12:59,890 - INFO - ✓ data18.js (6051 bytes)
+2025-11-19 14:13:00,954 - INFO - ✓ data19.js (6199 bytes)
+2025-11-19 14:13:02,634 - INFO - ✓ ?C=N;O=D (667 bytes)
+2025-11-19 14:13:03,672 - INFO - ✓ ?C=M;O=A (686 bytes)
+2025-11-19 14:13:04,734 - INFO - ✓ ?C=S;O=A (682 bytes)
+2025-11-19 14:13:05,877 - INFO - ✓ ?C=D;O=A (684 bytes)
+2025-11-19 14:13:07,405 - INFO - ✓ _index.js (0 bytes)
+2025-11-19 14:13:08,457 - INFO - ✓ _listing.js (2092 bytes)
+2025-11-19 14:13:09,563 - INFO - ✓ data0.js (9032 bytes)
+2025-11-19 14:13:10,640 - INFO - ✓ data1.js (12974 bytes)
+2025-11-19 14:13:11,822 - INFO - ✓ data2.js (10286 bytes)
+2025-11-19 14:13:12,933 - INFO - ✓ data3.js (10328 bytes)
+2025-11-19 14:13:14,073 - INFO - ✓ data4.js (9204 bytes)
+2025-11-19 14:13:15,192 - INFO - ✓ data5.js (10475 bytes)
+2025-11-19 14:13:16,335 - INFO - ✓ data6.js (9106 bytes)
+2025-11-19 14:13:17,385 - INFO - ✓ data7.js (8235 bytes)
+2025-11-19 14:13:18,493 - INFO - ✓ data8.js (9901 bytes)
+2025-11-19 14:13:19,605 - INFO - ✓ data9.js (9764 bytes)
+2025-11-19 14:13:20,729 - INFO - ✓ data10.js (10923 bytes)
+2025-11-19 14:13:21,921 - INFO - ✓ data11.js (7795 bytes)
+2025-11-19 14:13:23,086 - INFO - ✓ data12.js (9063 bytes)
+2025-11-19 14:13:24,343 - INFO - ✓ data13.js (12569 bytes)
+2025-11-19 14:13:25,674 - INFO - ✓ data14.js (12906 bytes)
+2025-11-19 14:13:26,869 - INFO - ✓ data15.js (14868 bytes)
+2025-11-19 14:13:28,004 - INFO - ✓ data16.js (12780 bytes)
+2025-11-19 14:13:29,268 - INFO - ✓ data17.js (15052 bytes)
+2025-11-19 14:13:30,459 - INFO - ✓ data18.js (12020 bytes)
+2025-11-19 14:13:31,649 - INFO - ✓ data19.js (7965 bytes)
+2025-11-19 14:13:33,416 - INFO - ✓ ?C=N;O=D (663 bytes)
+2025-11-19 14:13:34,550 - INFO - ✓ ?C=M;O=A (681 bytes)
+2025-11-19 14:13:35,616 - INFO - ✓ ?C=S;O=A (663 bytes)
+2025-11-19 14:13:36,804 - INFO - ✓ ?C=D;O=A (681 bytes)
+2025-11-19 14:13:38,446 - INFO - ✓ _index.js (0 bytes)
+2025-11-19 14:13:39,526 - INFO - ✓ _listing.js (11912 bytes)
+2025-11-19 14:13:40,703 - INFO - ✓ data0.js (16751 bytes)
+2025-11-19 14:13:41,932 - INFO - ✓ data1.js (17714 bytes)
+2025-11-19 14:13:43,110 - INFO - ✓ data2.js (16983 bytes)
+2025-11-19 14:13:44,330 - INFO - ✓ data3.js (17372 bytes)
+2025-11-19 14:13:45,644 - INFO - ✓ data4.js (16881 bytes)
+2025-11-19 14:13:46,870 - INFO - ✓ data5.js (15156 bytes)
+2025-11-19 14:13:48,080 - INFO - ✓ data6.js (16281 bytes)
+2025-11-19 14:13:49,278 - INFO - ✓ data7.js (16689 bytes)
+2025-11-19 14:13:50,492 - INFO - ✓ data8.js (15675 bytes)
+2025-11-19 14:13:51,683 - INFO - ✓ data9.js (19025 bytes)
+2025-11-19 14:13:52,850 - INFO - ✓ data10.js (17155 bytes)
+2025-11-19 14:13:54,003 - INFO - ✓ data11.js (18317 bytes)
+2025-11-19 14:13:55,213 - INFO - ✓ data12.js (16322 bytes)
+2025-11-19 14:13:56,379 - INFO - ✓ data13.js (16500 bytes)
+2025-11-19 14:13:57,624 - INFO - ✓ data14.js (16746 bytes)
+2025-11-19 14:13:58,836 - INFO - ✓ data15.js (15881 bytes)
+2025-11-19 14:14:00,069 - INFO - ✓ data16.js (16354 bytes)
+2025-11-19 14:14:01,295 - INFO - ✓ data17.js (14367 bytes)
+2025-11-19 14:14:02,541 - INFO - ✓ data18.js (15045 bytes)
+2025-11-19 14:14:03,732 - INFO - ✓ data19.js (17105 bytes)
+2025-11-19 14:14:05,478 - INFO - ✓ ?C=N;O=D (665 bytes)
+2025-11-19 14:14:06,603 - INFO - ✓ ?C=M;O=A (686 bytes)
+2025-11-19 14:14:07,728 - INFO - ✓ ?C=S;O=A (670 bytes)
+2025-11-19 14:14:08,857 - INFO - ✓ ?C=D;O=A (680 bytes)
+2025-11-19 14:14:10,259 - INFO - ✓ _index.js (0 bytes)
+2025-11-19 14:14:11,417 - INFO - ✓ _listing.js (12183 bytes)
+2025-11-19 14:14:12,529 - INFO - ✓ data0.js (6993 bytes)
+2025-11-19 14:14:13,596 - INFO - ✓ data1.js (9202 bytes)
+2025-11-19 14:14:14,647 - INFO - ✓ data2.js (9815 bytes)
+2025-11-19 14:14:15,810 - INFO - ✓ data3.js (5983 bytes)
+2025-11-19 14:14:16,944 - INFO - ✓ data4.js (5295 bytes)
+2025-11-19 14:14:18,074 - INFO - ✓ data5.js (9872 bytes)
+2025-11-19 14:14:19,122 - INFO - ✓ data6.js (9914 bytes)
+2025-11-19 14:14:20,336 - INFO - ✓ data7.js (10734 bytes)
+2025-11-19 14:14:21,586 - INFO - ✓ data8.js (15116 bytes)
+2025-11-19 14:14:22,684 - INFO - ✓ data9.js (9012 bytes)
+2025-11-19 14:14:23,924 - INFO - ✓ data10.js (12982 bytes)
+2025-11-19 14:14:24,973 - INFO - ✓ data11.js (8206 bytes)
+2025-11-19 14:14:26,173 - INFO - ✓ data12.js (9802 bytes)
+2025-11-19 14:14:27,292 - INFO - ✓ data13.js (5734 bytes)
+2025-11-19 14:14:28,337 - INFO - ✓ data14.js (8766 bytes)
+2025-11-19 14:14:29,397 - INFO - ✓ data15.js (7404 bytes)
+2025-11-19 14:14:30,569 - INFO - ✓ data16.js (8300 bytes)
+2025-11-19 14:14:31,660 - INFO - ✓ data17.js (8105 bytes)
+2025-11-19 14:14:32,741 - INFO - ✓ data18.js (9693 bytes)
+2025-11-19 14:14:33,794 - INFO - ✓ data19.js (11783 bytes)
+2025-11-19 14:14:35,479 - INFO - ✓ ?C=N;O=D (726 bytes)
+2025-11-19 14:14:36,580 - INFO - ✓ ?C=M;O=A (726 bytes)
+2025-11-19 14:14:37,664 - INFO - ✓ ?C=S;O=A (716 bytes)
+2025-11-19 14:14:38,758 - INFO - ✓ ?C=D;O=A (728 bytes)
+2025-11-19 14:14:39,877 - INFO - ✓ catalog.js (253 bytes)
+2025-11-19 14:14:41,401 - INFO - ✓ index.js (0 bytes)

@@ -1,0 +1,47 @@
+D&D 4e Database Scraper v2.0 - File List
+=========================================
+
+SCRIPT PRINCIPALI:
+- dnd_scraper_safe.py         : Scraper SAFE (no loop) ⭐ CONSIGLIATO
+- dnd_scraper_advanced.py     : Scraper avanzato (con resume)
+- dnd_scraper.py              : Scraper base
+- dnd_parser.py               : Parser JS → JSON
+- run.sh                      : Launcher Linux/Mac
+- run.bat                     : Launcher Windows
+
+DOCUMENTAZIONE:
+- QUICK_START.md              : Inizia qui! Guida rapida
+- BUGFIX_v2.md                : Spiegazione correzioni v2.0 🆕
+- README.md                   : Documentazione completa
+- PIANO_COMPLETO.md           : Roadmap progetto completo
+- VERSION.txt                 : Info versione 🆕
+- FILE_LIST.txt               : Questo file
+
+CONFIGURAZIONE:
+- requirements.txt            : Dipendenze Python
+- .gitignore                  : Esclusioni Git
+
+ISTRUZIONI RAPIDE (v2.0):
+=========================
+
+Windows:
+  1. Doppio click su run.bat
+  2. Seleziona opzione 2 (Scraper SAFE) ⭐
+
+Linux/Mac:
+  1. chmod +x run.sh
+  2. ./run.sh
+  3. Seleziona opzione 2 (Scraper SAFE) ⭐
+  
+Oppure manualmente:
+  pip install -r requirements.txt
+  python dnd_scraper_safe.py      ← CONSIGLIATO!
+  python dnd_parser.py
+
+NOVITÀ v2.0:
+- ✅ Fix loop infinito
+- ✅ Fix errori mailto:
+- ✅ Nuovo script SAFE
+- ✅ Documentazione correzioni
+
+Leggi BUGFIX_v2.md per i dettagli tecnici!

@@ -1,0 +1,24 @@
+D&D 4e Database Scraper
+=======================
+
+Version: 2.0
+Date: 2025-11-19
+
+CHANGELOG v2.0:
+- ✅ FIX: Rimossi tentativi di download link mailto:
+- ✅ FIX: Aggiunto tracking directory visitate (no loop)
+- ✅ NEW: Script SAFE per massima affidabilità
+- ✅ UPDATE: Menu launcher aggiornati
+- ✅ DOC: Aggiunto BUGFIX_v2.md con spiegazioni
+
+SCRIPT DISPONIBILI:
+- dnd_scraper_safe.py      ⭐ CONSIGLIATO - No loop, veloce
+- dnd_scraper_advanced.py  - Con resume, per strutture complesse
+- dnd_scraper.py           - Versione base semplice
+- dnd_parser.py            - Parser JS → JSON
+
+QUICK START:
+Windows: Doppio click su run.bat → opzione 2
+Linux/Mac: ./run.sh → opzione 2
+
+Per maggiori info: leggi QUICK_START.md e BUGFIX_v2.md
