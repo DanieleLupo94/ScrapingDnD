@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>D&D 4e Compendium</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:      #1a1a2e;
+    --surface: #16213e;
+    --card:    #0f3460;
+    --accent:  #e94560;
+    --text:    #eaeaea;
+    --muted:   #8899aa;
+    --border:  #1f4068;
+    --radius:  8px;
+  }
+
+  body { background: var(--bg); color: var(--text); font-family: system-ui, sans-serif; min-height: 100vh; }
+
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  header h1 { font-size: 1.2rem; color: var(--accent); white-space: nowrap; }
+
+  #search-box {
+    flex: 1;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    padding: .5rem .85rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color .2s;
+  }
+  #search-box:focus { border-color: var(--accent); }
+
+  #cat-select {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    padding: .5rem .75rem;
+    font-size: .9rem;
+    cursor: pointer;
+  }
+
+  .level-range { display: flex; align-items: center; gap: .4rem; font-size: .85rem; color: var(--muted); }
+  .level-range input {
+    width: 52px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    padding: .45rem .5rem;
+    font-size: .85rem;
+    text-align: center;
+  }
+
+  main { display: flex; gap: 0; height: calc(100vh - 57px); }
+
+  /* Results panel */
+  #results-panel {
+    width: 380px;
+    min-width: 260px;
+    overflow-y: auto;
+    border-right: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+
+  #results-meta {
+    padding: .6rem 1rem;
+    font-size: .8rem;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    background: var(--surface);
+    z-index: 5;
+  }
+
+  .result-card {
+    padding: .75rem 1rem;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: background .15s;
+  }
+  .result-card:hover { background: var(--card); }
+  .result-card.active { background: var(--card); border-left: 3px solid var(--accent); }
+
+  .card-name { font-weight: 600; font-size: .95rem; }
+  .card-meta { font-size: .75rem; color: var(--muted); margin-top: .2rem; display: flex; gap: .5rem; flex-wrap: wrap; }
+  .tag {
+    background: #1f4068;
+    border-radius: 4px;
+    padding: .1rem .4rem;
+    font-size: .72rem;
+  }
+  .tag.power   { background: #6b2737; }
+  .tag.feat    { background: #2d5a27; }
+  .tag.monster { background: #5a3b10; }
+  .tag.item    { background: #1a4a5a; }
+
+  /* Pagination */
+  #pagination {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    padding: .75rem;
+    border-top: 1px solid var(--border);
+  }
+  #pagination button {
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 4px;
+    padding: .3rem .7rem;
+    cursor: pointer;
+    font-size: .85rem;
+  }
+  #pagination button:disabled { opacity: .35; cursor: default; }
+  #pagination button.current { border-color: var(--accent); color: var(--accent); }
+
+  /* Detail panel */
+  #detail-panel {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem 2rem;
+  }
+
+  #detail-panel .empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--muted);
+    font-size: 1.1rem;
+  }
+
+  #detail h2 { font-size: 1.6rem; margin-bottom: .3rem; }
+  #detail .detail-meta { color: var(--muted); font-size: .85rem; margin-bottom: 1.2rem; display: flex; gap: .6rem; flex-wrap: wrap; align-items: center; }
+
+  .field-block { margin-bottom: 1rem; }
+  .field-label {
+    font-size: .7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--accent);
+    margin-bottom: .25rem;
+  }
+  .field-value { font-size: .95rem; line-height: 1.55; }
+  .field-value.mono { font-family: monospace; font-size: .85rem; color: #aad; }
+
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 1.2rem 0;
+  }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: .5rem;
+  }
+  .stat-item { background: var(--card); border-radius: var(--radius); padding: .5rem .75rem; }
+  .stat-item .stat-label { font-size: .7rem; color: var(--muted); }
+  .stat-item .stat-val   { font-size: .95rem; font-weight: 600; }
+
+  .attack-block {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: .6rem .9rem;
+    margin-bottom: .5rem;
+  }
+  .attack-header { font-weight: 600; font-size: .9rem; margin-bottom: .3rem; }
+  .attack-detail { font-size: .85rem; color: var(--muted); margin-left: .5rem; }
+
+  .power-block {
+    background: #0a2540;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: .75rem 1rem;
+    margin-bottom: .75rem;
+  }
+  .power-header { font-weight: 700; font-size: .95rem; margin-bottom: .4rem; color: var(--accent); }
+  .power-field  { font-size: .88rem; margin-bottom: .2rem; }
+  .power-field b { color: var(--text); }
+
+  @media (max-width: 700px) {
+    main { flex-direction: column; height: auto; }
+    #results-panel { width: 100%; height: 50vh; border-right: none; border-bottom: 1px solid var(--border); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>⚔ D&amp;D 4e</h1>
+  <input id="search-box" type="search" placeholder="Search by name or keyword…" autocomplete="off">
+  <select id="cat-select"><option value="">All categories</option></select>
+  <div class="level-range">
+    Lv <input id="lv-min" type="number" min="1" max="30" placeholder="1">
+    – <input id="lv-max" type="number" min="1" max="30" placeholder="30">
+  </div>
+</header>
+
+<main>
+  <div id="results-panel">
+    <div id="results-meta">Loading…</div>
+    <div id="results-list"></div>
+    <div id="pagination"></div>
+  </div>
+  <div id="detail-panel">
+    <div class="empty">← Select an entry</div>
+  </div>
+</main>
+
+<script>
+const $ = id => document.getElementById(id);
+let state = { q: "", category: "", lv_min: null, lv_max: null, page: 1, active: null };
+let debounceTimer = null;
+
+// ── Carica categorie ──────────────────────────────────────────────────────────
+async function loadCategories() {
+  const res = await fetch("/api/categories");
+  const cats = await res.json();
+  const sel = $("cat-select");
+  cats.forEach(c => {
+    const opt = document.createElement("option");
+    opt.value = c.name;
+    opt.textContent = `${c.name} (${c.count})`;
+    sel.appendChild(opt);
+  });
+}
+
+// ── Ricerca ───────────────────────────────────────────────────────────────────
+async function doSearch() {
+  const params = new URLSearchParams({ page: state.page, per_page: 20 });
+  if (state.q)        params.set("q", state.q);
+  if (state.category) params.set("category", state.category);
+  if (state.lv_min)   params.set("level_min", state.lv_min);
+  if (state.lv_max)   params.set("level_max", state.lv_max);
+
+  const res  = await fetch("/api/search?" + params);
+  const data = await res.json();
+  renderResults(data);
+}
+
+function scheduleSearch() {
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(() => { state.page = 1; doSearch(); }, 280);
+}
+
+// ── Render lista ──────────────────────────────────────────────────────────────
+function tagClass(cat) {
+  const c = cat.toLowerCase();
+  if (c.includes("power") || c === "power") return "power";
+  if (c === "feat")    return "feat";
+  if (c === "monster") return "monster";
+  if (["item","weapon","armor","implement","poison"].includes(c)) return "item";
+  return "";
+}
+
+function renderResults({ total, page, pages, results }) {
+  $("results-meta").textContent =
+    total === 0 ? "No results"
+    : `${total.toLocaleString()} results — page ${page}/${pages}`;
+
+  const list = $("results-list");
+  list.innerHTML = "";
+  results.forEach(r => {
+    const div = document.createElement("div");
+    div.className = "result-card" + (r.id === state.active ? " active" : "");
+    div.dataset.id = r.id;
+
+    const lvl = r.level ? ` · Lv ${r.level}` : "";
+    const pt  = r.power_type ? ` · ${r.power_type}` : "";
+    const tc  = tagClass(r.category);
+
+    div.innerHTML = `
+      <div class="card-name">${esc(r.name)}</div>
+      <div class="card-meta">
+        <span class="tag ${tc}">${esc(r.category)}</span>
+        <span>${esc(lvl + pt)}</span>
+      </div>`;
+    div.addEventListener("click", () => showDetail(r));
+    list.appendChild(div);
+  });
+
+  // Paginazione
+  const pg = $("pagination");
+  pg.innerHTML = "";
+  if (pages > 1) {
+    btn("«", page > 1, () => { state.page = 1; doSearch(); });
+    btn("‹", page > 1, () => { state.page--; doSearch(); });
+    const span = document.createElement("span");
+    span.style.cssText = "font-size:.85rem;color:var(--muted);padding:.3rem .5rem";
+    span.textContent = `${page} / ${pages}`;
+    pg.appendChild(span);
+    btn("›", page < pages, () => { state.page++; doSearch(); });
+    btn("»", page < pages, () => { state.page = pages; doSearch(); });
+  }
+
+  function btn(label, enabled, cb) {
+    const b = document.createElement("button");
+    b.textContent = label;
+    b.disabled = !enabled;
+    if (enabled) b.addEventListener("click", cb);
+    pg.appendChild(b);
+  }
+}
+
+// ── Dettaglio ─────────────────────────────────────────────────────────────────
+function showDetail(r) {
+  state.active = r.id;
+  document.querySelectorAll(".result-card").forEach(el => {
+    el.classList.toggle("active", el.dataset.id === r.id);
+  });
+  renderDetail(r.category, r.data);
+}
+
+function renderDetail(category, d) {
+  const panel = $("detail-panel");
+
+  // Campi da non mostrare come field-block generici
+  const SKIP = new Set(["id", "name", "source", "source_pages", "json_data"]);
+
+  const lvl = d.level ? ` · Lv ${d.level}` : "";
+  const src = d.source ? `${d.source}${d.source_pages ? " p." + d.source_pages : ""}` : "";
+
+  let html = `
+    <div id="detail">
+      <h2>${esc(d.name || "")}</h2>
+      <div class="detail-meta">
+        <span class="tag ${tagClass(category)}">${esc(category)}</span>
+        ${lvl ? `<span>${esc(lvl.trim())}</span>` : ""}
+        ${src  ? `<span style="color:var(--muted)">${esc(src)}</span>` : ""}
+      </div>`;
+
+  // ── Flavor text ──
+  if (d.flavor_text) {
+    html += `<div class="field-block"><div class="field-value" style="font-style:italic;color:var(--muted)">${esc(d.flavor_text)}</div></div><hr class="section-divider">`;
+  }
+
+  // ── Power (categoria Power / Disease) ──
+  if (["Power","Disease"].includes(category)) {
+    html += renderPowerDetail(d);
+  }
+  // ── Monster ──
+  else if (category === "Monster" || category === "Companion") {
+    html += renderMonsterDetail(d);
+  }
+  // ── Magic items ──
+  else if (["Item","Weapon","Implement","Armor","Poison"].includes(category)) {
+    html += renderItemDetail(d);
+  }
+  // ── Generico ──
+  else {
+    html += renderGeneric(d, SKIP);
+  }
+
+  html += `</div>`;
+  panel.innerHTML = html;
+}
+
+function renderPowerDetail(d) {
+  const POWER_SKIP = new Set(["id","name","source","source_pages","flavor_text",
+    "power_type","class_name","power_category","level","usage","keywords",
+    "action_type","range"]);
+
+  let h = "";
+  // Header line
+  const parts = [];
+  if (d.usage)       parts.push(`<b>${esc(d.usage)}</b>`);
+  if (d.keywords?.length) parts.push(d.keywords.map(esc).join(", "));
+  if (parts.length) h += `<div class="power-field" style="margin-bottom:.5rem">${parts.join(" ✦ ")}</div>`;
+
+  if (d.action_type || d.range) {
+    h += `<div class="power-field">${esc(d.action_type || "")} ${d.range ? "· " + esc(d.range) : ""}</div>`;
+  }
+
+  const meta = [];
+  if (d.class_name)      meta.push(d.class_name);
+  if (d.power_category)  meta.push(d.power_category);
+  if (d.level)           meta.push("Lv " + d.level);
+  if (meta.length) h += `<div class="field-value" style="color:var(--muted);font-size:.85rem;margin-bottom:.8rem">${meta.map(esc).join(" · ")}</div>`;
+
+  h += `<hr class="section-divider">`;
+
+  // Campi rimanenti come blocchi
+  for (const [k, v] of Object.entries(d)) {
+    if (POWER_SKIP.has(k) || v == null || v === "") continue;
+    const label = k.replace(/_/g, " ");
+    h += field(label, v);
+  }
+  return h;
+}
+
+function renderMonsterDetail(d) {
+  let h = "";
+  const META = new Set(["id","name","source","source_pages","flavor_text","creature_type","level","xp"]);
+
+  if (d.creature_type || d.level || d.xp) {
+    h += `<div class="stat-grid" style="margin-bottom:1rem">`;
+    if (d.creature_type) h += statItem("Tipo", d.creature_type);
+    if (d.level)         h += statItem("Livello", d.level);
+    if (d.xp)            h += statItem("XP", d.xp);
+    h += `</div>`;
+  }
+
+  if (d.stat_block && typeof d.stat_block === "object") {
+    h += `<div class="stat-grid" style="margin-bottom:1rem">`;
+    for (const [k, v] of Object.entries(d.stat_block)) {
+      h += statItem(k.replace(/_/g,"  "), v);
+    }
+    h += `</div>`;
+  }
+
+  if (d.attacks?.length) {
+    h += `<hr class="section-divider"><div class="field-label">Attacks</div>`;
+    d.attacks.forEach(a => {
+      h += `<div class="attack-block"><div class="attack-header">${esc(a.header || "")}</div>`;
+      (a.details || []).forEach(det => { h += `<div class="attack-detail">${esc(det)}</div>`; });
+      h += `</div>`;
+    });
+  }
+
+  for (const [k, v] of Object.entries(d)) {
+    if (META.has(k) || k === "stat_block" || k === "attacks" || v == null) continue;
+    h += field(k.replace(/_/g," "), v);
+  }
+  return h;
+}
+
+function renderItemDetail(d) {
+  let h = "";
+  const SKIP = new Set(["id","name","source","source_pages","description","item_level","tiers","properties","powers"]);
+  if (d.description) h += `<div class="field-block"><div class="field-value">${esc(d.description)}</div></div>`;
+  if (d.item_level)  h += field("Livello", d.item_level);
+
+  if (d.tiers?.length) {
+    h += `<hr class="section-divider"><div class="field-label">Tiers</div><div class="stat-grid">`;
+    d.tiers.forEach(row => {
+      if (Array.isArray(row)) h += statItem(row[0] || "", row.slice(1).join(" · "));
+    });
+    h += `</div>`;
+  }
+
+  if (d.properties?.length) {
+    h += `<hr class="section-divider"><div class="field-label">Properties</div>`;
+    d.properties.forEach(p => { h += `<div class="field-value" style="margin-bottom:.3rem">${esc(p)}</div>`; });
+  }
+
+  if (d.powers?.length) {
+    h += `<hr class="section-divider"><div class="field-label">Powers</div>`;
+    d.powers.forEach(pw => {
+      h += `<div class="power-block"><div class="power-header">${esc(pw.header || "")}</div>`;
+      (pw.text || pw.properties || []).forEach(t => { h += `<div class="power-field">${esc(t)}</div>`; });
+      h += `</div>`;
+    });
+  }
+
+  for (const [k, v] of Object.entries(d)) {
+    if (SKIP.has(k) || v == null) continue;
+    h += field(k.replace(/_/g," "), v);
+  }
+  return h;
+}
+
+function renderGeneric(d, skip) {
+  let h = "";
+  for (const [k, v] of Object.entries(d)) {
+    if (skip.has(k) || v == null || v === "") continue;
+    h += field(k.replace(/_/g," "), v);
+  }
+  return h;
+}
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+function field(label, value) {
+  const rendered = renderValue(value);
+  return `<div class="field-block">
+    <div class="field-label">${esc(label)}</div>
+    <div class="field-value">${rendered}</div>
+  </div>`;
+}
+
+function renderValue(v) {
+  if (Array.isArray(v)) return v.map(item => `<div style="margin-bottom:.2rem">• ${renderValue(item)}</div>`).join("");
+  if (typeof v === "object" && v !== null) {
+    return Object.entries(v).map(([k, val]) =>
+      `<div><b>${esc(k.replace(/_/g," "))}:</b> ${renderValue(val)}</div>`).join("");
+  }
+  return esc(String(v));
+}
+
+function statItem(label, val) {
+  return `<div class="stat-item"><div class="stat-label">${esc(String(label))}</div><div class="stat-val">${esc(String(val))}</div></div>`;
+}
+
+function esc(s) {
+  return String(s ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+
+// ── Event listeners ───────────────────────────────────────────────────────────
+$("search-box").addEventListener("input", e => {
+  state.q = e.target.value.trim();
+  scheduleSearch();
+});
+$("cat-select").addEventListener("change", e => {
+  state.category = e.target.value;
+  state.page = 1;
+  doSearch();
+});
+$("lv-min").addEventListener("input", e => {
+  state.lv_min = e.target.value ? parseInt(e.target.value) : null;
+  scheduleSearch();
+});
+$("lv-max").addEventListener("input", e => {
+  state.lv_max = e.target.value ? parseInt(e.target.value) : null;
+  scheduleSearch();
+});
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+loadCategories().then(() => doSearch());
+</script>
+</body>
+</html>

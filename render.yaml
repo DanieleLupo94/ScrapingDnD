@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: dnd-compendium
+    runtime: python
+    buildCommand: pip install -r requirements.txt && unzip -o json_output.zip && python build_db.py
+    startCommand: gunicorn serve:app --bind 0.0.0.0:$PORT --workers 2 --timeout 60
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
