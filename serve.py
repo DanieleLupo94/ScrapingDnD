@@ -60,7 +60,7 @@ def facets():
             class_rows = conn.execute(
                 f"SELECT json_extract(json_data,'$.class_name') AS v, COUNT(*) n {base}"
                 " AND json_extract(json_data,'$.class_name') IS NOT NULL"
-                " GROUP BY v ORDER BY n DESC"
+                " GROUP BY v HAVING n >= 30 ORDER BY n DESC"
             ).fetchall()
 
             USAGE_LABEL = {"at-will": "At-Will", "encounter": "Encounter", "daily": "Daily"}
@@ -87,7 +87,7 @@ def facets():
                         ],
                     },
                     {
-                        "id": "class_name", "label": "Class", "type": "select",
+                        "id": "class_name", "label": "Class", "type": "badges",
                         "values": [{"value": r["v"], "label": r["v"], "count": r["n"]} for r in class_rows],
                     },
                 ]

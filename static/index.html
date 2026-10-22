@@ -144,19 +144,6 @@
     border-color: #e07080;
     background: #3a1520;
   }
-  .ctx-select {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    color: var(--text);
-    font-size: .72rem;
-    padding: .18rem .4rem;
-    cursor: pointer;
-    outline: none;
-    max-width: 160px;
-  }
-  .ctx-select:focus { border-color: var(--accent); }
-
   /* Dual range slider */
   .level-wrap {
     display: flex;
@@ -587,27 +574,6 @@ async function updateCtxFilters() {
         });
         group.appendChild(b);
       });
-    } else if (facet.type === "select") {
-      if (ctxFilters[facet.id] === undefined) ctxFilters[facet.id] = "";
-      const sel = document.createElement("select");
-      sel.className = "ctx-select";
-      sel.dataset.fid = facet.id;
-      const opt0 = document.createElement("option");
-      opt0.value = ""; opt0.textContent = "Any " + facet.label;
-      sel.appendChild(opt0);
-      facet.values.forEach(v => {
-        const opt = document.createElement("option");
-        opt.value = v.value;
-        opt.textContent = `${v.label} (${v.count})`;
-        opt.selected = ctxFilters[facet.id] === v.value;
-        sel.appendChild(opt);
-      });
-      sel.addEventListener("change", () => {
-        ctxFilters[facet.id] = sel.value;
-        state.page = 1;
-        doSearch();
-      });
-      group.appendChild(sel);
     }
 
     panel.appendChild(group);
@@ -627,7 +593,7 @@ async function doSearch() {
   // Contextual sub-filters
   if (ctxFilters.power_usage?.size)  params.set("power_usage",  [...ctxFilters.power_usage].join(","));
   if (ctxFilters.action_type?.size)  params.set("action_type",  [...ctxFilters.action_type].join(","));
-  if (ctxFilters.class_name)         params.set("class_name",   ctxFilters.class_name);
+  if (ctxFilters.class_name?.size)   params.set("class_name",   [...ctxFilters.class_name].join(","));
 
   const res  = await fetch("/api/search?" + params);
   const data = await res.json();
