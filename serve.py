@@ -38,6 +38,64 @@ def categories():
     return jsonify([{"name": r["category"], "count": r["n"]} for r in rows])
 
 
+@app.get("/api/facets")
+def facets():
+    """Return filterable field values for the given category set."""
+    cats = [c.strip() for c in request.args.get("categories", "").split(",") if c.strip()]
+
+    result: dict = {}
+
+    with get_db() as conn:
+        if "Power" in cats or not cats:
+            base = "FROM entries WHERE category='Power'"
+            usage_rows = conn.execute(
+                f"SELECT power_type AS v, COUNT(*) n {base} AND power_type IS NOT NULL"
+                " GROUP BY power_type ORDER BY n DESC"
+            ).fetchall()
+            action_rows = conn.execute(
+                f"SELECT json_extract(json_data,'$.action_type') AS v, COUNT(*) n {base}"
+                " AND json_extract(json_data,'$.action_type') IS NOT NULL"
+                " GROUP BY v ORDER BY n DESC LIMIT 12"
+            ).fetchall()
+            class_rows = conn.execute(
+                f"SELECT json_extract(json_data,'$.class_name') AS v, COUNT(*) n {base}"
+                " AND json_extract(json_data,'$.class_name') IS NOT NULL"
+                " GROUP BY v ORDER BY n DESC"
+            ).fetchall()
+
+            USAGE_LABEL = {"at-will": "At-Will", "encounter": "Encounter", "daily": "Daily"}
+            ACTION_LABEL = {
+                "Standard Action": "Standard", "Minor Action": "Minor",
+                "Immediate Interrupt": "Imm. Interrupt", "Immediate Reaction": "Imm. Reaction",
+                "Free Action": "Free", "Move Action": "Move",
+                "No Action": "No Action", "Opportunity Action": "Opportunity",
+            }
+            result["Power"] = {
+                "facets": [
+                    {
+                        "id": "power_usage", "label": "Usage", "type": "badges",
+                        "values": [
+                            {"value": r["v"], "label": USAGE_LABEL.get(r["v"], r["v"]), "count": r["n"]}
+                            for r in usage_rows if r["v"] in USAGE_LABEL
+                        ],
+                    },
+                    {
+                        "id": "action_type", "label": "Action", "type": "badges",
+                        "values": [
+                            {"value": r["v"], "label": ACTION_LABEL.get(r["v"], r["v"]), "count": r["n"]}
+                            for r in action_rows if r["v"] in ACTION_LABEL
+                        ],
+                    },
+                    {
+                        "id": "class_name", "label": "Class", "type": "select",
+                        "values": [{"value": r["v"], "label": r["v"], "count": r["n"]} for r in class_rows],
+                    },
+                ]
+            }
+
+    return jsonify(result)
+
+
 @app.get("/api/search")
 def search():
     q          = request.args.get("q", "").strip()
@@ -47,6 +105,11 @@ def search():
     page       = max(1, request.args.get("page", 1, type=int))
     per_page   = min(50, request.args.get("per_page", 20, type=int))
     offset     = (page - 1) * per_page
+
+    # Contextual sub-filters
+    power_usage  = [v.strip() for v in request.args.get("power_usage",  "").split(",") if v.strip()]
+    action_types = [v.strip() for v in request.args.get("action_type",  "").split(",") if v.strip()]
+    class_names  = [v.strip() for v in request.args.get("class_name",   "").split(",") if v.strip()]
 
     params: list = []
     filters: list[str] = []
@@ -61,6 +124,18 @@ def search():
     if lv_max is not None:
         filters.append("(e.level <= ? OR e.level IS NULL)")
         params.append(lv_max)
+    if power_usage:
+        placeholders = ",".join("?" * len(power_usage))
+        filters.append(f"e.power_type IN ({placeholders})")
+        params.extend(power_usage)
+    if action_types:
+        placeholders = ",".join("?" * len(action_types))
+        filters.append(f"json_extract(e.json_data,'$.action_type') IN ({placeholders})")
+        params.extend(action_types)
+    if class_names:
+        placeholders = ",".join("?" * len(class_names))
+        filters.append(f"json_extract(e.json_data,'$.class_name') IN ({placeholders})")
+        params.extend(class_names)
 
     where = ("WHERE " + " AND ".join(filters)) if filters else ""
 

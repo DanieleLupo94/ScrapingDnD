@@ -101,6 +101,62 @@
   .cat-badge.active[data-cat="Ritual"]       { color: #b080e0; border-color: #b080e0; background: #200a30; }
   .cat-badge.active[data-cat="Disease"]      { color: #90c040; border-color: #90c040; background: #152010; }
 
+  /* Contextual sub-filters */
+  #ctx-filters {
+    display: none;
+    flex-direction: column;
+    gap: .35rem;
+    margin-top: .5rem;
+    padding-top: .5rem;
+    border-top: 1px solid var(--border);
+  }
+  #ctx-filters.visible { display: flex; }
+
+  .ctx-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .35rem;
+  }
+  .ctx-label {
+    font-size: .68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: var(--muted);
+    white-space: nowrap;
+    min-width: 48px;
+  }
+  .ctx-badge {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: .18rem .5rem;
+    font-size: .7rem;
+    cursor: pointer;
+    color: var(--muted);
+    background: transparent;
+    white-space: nowrap;
+    user-select: none;
+    transition: background .12s, border-color .12s, color .12s;
+  }
+  .ctx-badge.active {
+    color: #e07080;
+    border-color: #e07080;
+    background: #3a1520;
+  }
+  .ctx-select {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text);
+    font-size: .72rem;
+    padding: .18rem .4rem;
+    cursor: pointer;
+    outline: none;
+    max-width: 160px;
+  }
+  .ctx-select:focus { border-color: var(--accent); }
+
   /* Dual range slider */
   .level-wrap {
     display: flex;
@@ -389,6 +445,9 @@
     <button class="cat-ctrl" id="btn-none">None</button>
     <!-- badges injected by JS -->
   </div>
+  <div id="ctx-filters">
+    <!-- contextual sub-filter groups injected by JS -->
+  </div>
 </header>
 
 <main id="main-container">
@@ -410,6 +469,8 @@ const $ = id => document.getElementById(id);
 let allCategories = [];       // [{name, count}, ...]
 let selectedCats = new Set(); // empty = all selected
 let state = { q: "", lv_min: null, lv_max: null, page: 1, active: null };
+let ctxFilters = {};          // { power_usage: Set, action_type: Set, class_name: "" }
+let loadedFacets = null;      // last-loaded facets data
 let debounceTimer = null;
 
 const isMobile = () => window.matchMedia("(max-width: 640px)").matches;
@@ -452,7 +513,7 @@ function toggleCat(name) {
   }
   renderBadges();
   state.page = 1;
-  doSearch();
+  updateCtxFilters().then(() => doSearch());
 }
 
 function renderBadges() {
@@ -465,15 +526,93 @@ $("btn-all").addEventListener("click", () => {
   allCategories.forEach(c => selectedCats.add(c.name));
   renderBadges();
   state.page = 1;
-  doSearch();
+  updateCtxFilters().then(() => doSearch());
 });
 
 $("btn-none").addEventListener("click", () => {
   selectedCats.clear();
   renderBadges();
   state.page = 1;
-  doSearch();
+  updateCtxFilters().then(() => doSearch());
 });
+
+// ── Contextual facets ─────────────────────────────────────────────────────────
+async function updateCtxFilters() {
+  const powerActive = selectedCats.has("Power") || selectedCats.size === 0;
+  const panel = $("ctx-filters");
+
+  if (!powerActive) {
+    panel.classList.remove("visible");
+    panel.innerHTML = "";
+    loadedFacets = null;
+    // clear power sub-filters
+    ctxFilters = {};
+    return;
+  }
+
+  const catParam = selectedCats.size > 0 && selectedCats.size < allCategories.length
+    ? [...selectedCats].join(",") : "";
+  const res = await fetch("/api/facets?" + (catParam ? "categories=" + encodeURIComponent(catParam) : ""));
+  loadedFacets = await res.json();
+
+  panel.innerHTML = "";
+  panel.classList.add("visible");
+
+  // Only render Power facets for now
+  const pf = loadedFacets["Power"];
+  if (!pf) return;
+
+  pf.facets.forEach(facet => {
+    const group = document.createElement("div");
+    group.className = "ctx-group";
+    const lbl = document.createElement("span");
+    lbl.className = "ctx-label";
+    lbl.textContent = facet.label + ":";
+    group.appendChild(lbl);
+
+    if (facet.type === "badges") {
+      if (!ctxFilters[facet.id]) ctxFilters[facet.id] = new Set();
+      facet.values.forEach(v => {
+        const b = document.createElement("span");
+        b.className = "ctx-badge" + (ctxFilters[facet.id].has(v.value) ? " active" : "");
+        b.textContent = v.label;
+        b.dataset.fid = facet.id;
+        b.dataset.val = v.value;
+        b.addEventListener("click", () => {
+          if (ctxFilters[facet.id].has(v.value)) ctxFilters[facet.id].delete(v.value);
+          else ctxFilters[facet.id].add(v.value);
+          b.classList.toggle("active", ctxFilters[facet.id].has(v.value));
+          state.page = 1;
+          doSearch();
+        });
+        group.appendChild(b);
+      });
+    } else if (facet.type === "select") {
+      if (ctxFilters[facet.id] === undefined) ctxFilters[facet.id] = "";
+      const sel = document.createElement("select");
+      sel.className = "ctx-select";
+      sel.dataset.fid = facet.id;
+      const opt0 = document.createElement("option");
+      opt0.value = ""; opt0.textContent = "Any " + facet.label;
+      sel.appendChild(opt0);
+      facet.values.forEach(v => {
+        const opt = document.createElement("option");
+        opt.value = v.value;
+        opt.textContent = `${v.label} (${v.count})`;
+        opt.selected = ctxFilters[facet.id] === v.value;
+        sel.appendChild(opt);
+      });
+      sel.addEventListener("change", () => {
+        ctxFilters[facet.id] = sel.value;
+        state.page = 1;
+        doSearch();
+      });
+      group.appendChild(sel);
+    }
+
+    panel.appendChild(group);
+  });
+}
 
 // ── Ricerca ───────────────────────────────────────────────────────────────────
 async function doSearch() {
@@ -485,6 +624,10 @@ async function doSearch() {
   if (selectedCats.size > 0 && selectedCats.size < allCategories.length) {
     params.set("categories", [...selectedCats].join(","));
   }
+  // Contextual sub-filters
+  if (ctxFilters.power_usage?.size)  params.set("power_usage",  [...ctxFilters.power_usage].join(","));
+  if (ctxFilters.action_type?.size)  params.set("action_type",  [...ctxFilters.action_type].join(","));
+  if (ctxFilters.class_name)         params.set("class_name",   ctxFilters.class_name);
 
   const res  = await fetch("/api/search?" + params);
   const data = await res.json();
@@ -786,7 +929,7 @@ $("back-btn").addEventListener("click", () => setMobileView("list"));
 // ── Init ──────────────────────────────────────────────────────────────────────
 updateRangeFill();
 setMobileView("list");
-loadCategories().then(() => doSearch());
+loadCategories().then(() => updateCtxFilters()).then(() => doSearch());
 </script>
 </body>
 </html>
