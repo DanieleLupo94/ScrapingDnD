@@ -23,18 +23,24 @@
   header {
     background: var(--surface);
     border-bottom: 1px solid var(--border);
-    padding: 1rem 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    padding: .75rem 1.5rem;
     position: sticky;
     top: 0;
     z-index: 10;
+  }
+
+  .header-row1 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: .6rem;
   }
   header h1 { font-size: 1.2rem; color: var(--accent); white-space: nowrap; }
 
   #search-box {
     flex: 1;
+    min-width: 120px;
+    max-width: 320px;
     background: var(--bg);
     border: 1px solid var(--border);
     border-radius: var(--radius);
@@ -46,29 +52,135 @@
   }
   #search-box:focus { border-color: var(--accent); }
 
-  #cat-select {
-    background: var(--bg);
+  /* Category badges */
+  .filter-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .4rem;
+  }
+
+  .cat-ctrl {
+    background: transparent;
     border: 1px solid var(--border);
-    border-radius: var(--radius);
-    color: var(--text);
-    padding: .5rem .75rem;
-    font-size: .9rem;
+    border-radius: 4px;
+    color: var(--muted);
+    padding: .2rem .55rem;
+    font-size: .72rem;
     cursor: pointer;
+    transition: border-color .15s, color .15s;
+    white-space: nowrap;
   }
+  .cat-ctrl:hover { border-color: var(--accent); color: var(--text); }
 
-  .level-range { display: flex; align-items: center; gap: .4rem; font-size: .85rem; color: var(--muted); }
-  .level-range input {
-    width: 52px;
-    background: var(--bg);
+  .cat-badge {
     border: 1px solid var(--border);
-    border-radius: var(--radius);
+    border-radius: 4px;
+    padding: .2rem .55rem;
+    font-size: .72rem;
+    cursor: pointer;
+    transition: background .15s, border-color .15s, color .15s;
+    white-space: nowrap;
+    user-select: none;
+    color: var(--muted);
+    background: transparent;
+  }
+  .cat-badge.active {
     color: var(--text);
-    padding: .45rem .5rem;
-    font-size: .85rem;
-    text-align: center;
+    border-color: currentColor;
+  }
+  /* Per-category colours when active */
+  .cat-badge.active[data-cat="Power"]        { color: #e07080; border-color: #e07080; background: #3a1520; }
+  .cat-badge.active[data-cat="Feat"]         { color: #70c070; border-color: #70c070; background: #152a15; }
+  .cat-badge.active[data-cat="Monster"]      { color: #e09040; border-color: #e09040; background: #2a1a05; }
+  .cat-badge.active[data-cat="Item"]         { color: #60b0d0; border-color: #60b0d0; background: #0a2030; }
+  .cat-badge.active[data-cat="Weapon"]       { color: #60b0d0; border-color: #60b0d0; background: #0a2030; }
+  .cat-badge.active[data-cat="Armor"]        { color: #60b0d0; border-color: #60b0d0; background: #0a2030; }
+  .cat-badge.active[data-cat="Implement"]    { color: #60b0d0; border-color: #60b0d0; background: #0a2030; }
+  .cat-badge.active[data-cat="Poison"]       { color: #90c040; border-color: #90c040; background: #152010; }
+  .cat-badge.active[data-cat="Ritual"]       { color: #b080e0; border-color: #b080e0; background: #200a30; }
+  .cat-badge.active[data-cat="Disease"]      { color: #90c040; border-color: #90c040; background: #152010; }
+
+  /* Dual range slider */
+  .level-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+    min-width: 160px;
+  }
+  .level-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: .72rem;
+    color: var(--muted);
+    user-select: none;
+  }
+  .level-header strong { color: var(--text); font-size: .8rem; letter-spacing: .02em; }
+  .dual-range {
+    position: relative;
+    height: 20px;
+  }
+  .dual-range input[type=range] {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    pointer-events: none;
+    outline: none;
+    margin: 0;
+  }
+  .dual-range input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg);
+    cursor: pointer;
+    pointer-events: all;
+    transition: transform .15s;
+    box-shadow: 0 0 4px rgba(0,0,0,.5);
+  }
+  .dual-range input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.2); }
+  .dual-range input[type=range]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg);
+    cursor: pointer;
+    pointer-events: all;
+  }
+  /* Track color via the JS-updated background */
+  #range-track {
+    position: absolute;
+    height: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    border-radius: 2px;
+    background: var(--border);
+    z-index: 0;
+  }
+  #range-fill {
+    position: absolute;
+    height: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 2px;
+    background: var(--accent);
+    z-index: 1;
+    pointer-events: none;
   }
 
-  main { display: flex; gap: 0; height: calc(100vh - 57px); }
+  main { display: flex; gap: 0; height: calc(100vh - 90px); }
 
   /* Results panel */
   #results-panel {
@@ -135,11 +247,17 @@
   /* Detail panel */
   #detail-panel {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #detail-content {
+    flex: 1;
     overflow-y: auto;
     padding: 1.5rem 2rem;
   }
 
-  #detail-panel .empty {
+  #detail-content .empty {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,60 +316,175 @@
   .power-field  { font-size: .88rem; margin-bottom: .2rem; }
   .power-field b { color: var(--text); }
 
-  @media (max-width: 700px) {
+  #back-btn {
+    display: none;
+    align-items: center;
+    gap: .4rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--muted);
+    padding: .45rem .9rem;
+    cursor: pointer;
+    font-size: .85rem;
+    margin-bottom: 1rem;
+  }
+  #back-btn:hover { border-color: var(--accent); color: var(--text); }
+
+  @media (max-width: 640px) {
+    header { padding: .6rem 1rem; }
+
+    .header-row1 { flex-wrap: wrap; gap: .6rem; margin-bottom: .5rem; }
+
+    header h1 { flex: 0 0 auto; }
+    #search-box { flex: 1 1 120px; max-width: 100%; }
+    .level-wrap { flex: 0 0 100%; min-width: 0; }
+
     main { flex-direction: column; height: auto; }
-    #results-panel { width: 100%; height: 50vh; border-right: none; border-bottom: 1px solid var(--border); }
+
+    #results-panel {
+      width: 100%;
+      height: auto;
+      border-right: none;
+      border-bottom: none;
+    }
+
+    #detail-panel { height: auto; }
+    #detail-content { padding: 1rem; }
+    #back-btn { display: flex; margin: .75rem 1rem .25rem; }
+
+    main.mobile-list #detail-panel    { display: none; }
+    main.mobile-detail #results-panel { display: none; }
+
+    .dual-range { height: 28px; }
+    .dual-range input[type=range]::-webkit-slider-thumb { width: 22px; height: 22px; }
+    .dual-range input[type=range]::-moz-range-thumb     { width: 22px; height: 22px; }
+
+    .cat-badge, .cat-ctrl { padding: .4rem .7rem; font-size: .8rem; }
+    .result-card { padding: .9rem 1rem; }
   }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>⚔ D&amp;D 4e</h1>
-  <input id="search-box" type="search" placeholder="Search by name or keyword…" autocomplete="off">
-  <select id="cat-select"><option value="">All categories</option></select>
-  <div class="level-range">
-    Lv <input id="lv-min" type="number" min="1" max="30" placeholder="1">
-    – <input id="lv-max" type="number" min="1" max="30" placeholder="30">
+  <div class="header-row1">
+    <h1>⚔ D&amp;D 4e</h1>
+    <input id="search-box" type="search" placeholder="Search by name or keyword…" autocomplete="off">
+    <div class="level-wrap">
+      <div class="level-header">
+        <span>Level</span>
+        <strong id="lv-display">1 – 30</strong>
+      </div>
+      <div class="dual-range">
+        <div id="range-track"></div>
+        <div id="range-fill"></div>
+        <input id="lv-min" type="range" min="1" max="30" value="1">
+        <input id="lv-max" type="range" min="1" max="30" value="30">
+      </div>
+    </div>
+  </div>
+  <div class="filter-row" id="cat-filter">
+    <button class="cat-ctrl" id="btn-all">All</button>
+    <button class="cat-ctrl" id="btn-none">None</button>
+    <!-- badges injected by JS -->
   </div>
 </header>
 
-<main>
+<main id="main-container">
   <div id="results-panel">
     <div id="results-meta">Loading…</div>
     <div id="results-list"></div>
     <div id="pagination"></div>
   </div>
   <div id="detail-panel">
-    <div class="empty">← Select an entry</div>
+    <button id="back-btn">← Back</button>
+    <div id="detail-content">
+      <div class="empty">Select an entry from the list</div>
+    </div>
   </div>
 </main>
 
 <script>
 const $ = id => document.getElementById(id);
-let state = { q: "", category: "", lv_min: null, lv_max: null, page: 1, active: null };
+let allCategories = [];       // [{name, count}, ...]
+let selectedCats = new Set(); // empty = all selected
+let state = { q: "", lv_min: null, lv_max: null, page: 1, active: null };
 let debounceTimer = null;
 
-// ── Carica categorie ──────────────────────────────────────────────────────────
+const isMobile = () => window.matchMedia("(max-width: 640px)").matches;
+
+function setMobileView(view) {
+  const m = $("main-container");
+  if (isMobile()) {
+    m.classList.toggle("mobile-list",   view === "list");
+    m.classList.toggle("mobile-detail", view === "detail");
+  } else {
+    m.classList.remove("mobile-list", "mobile-detail");
+  }
+}
+
+window.addEventListener("resize", () => setMobileView("list"));
+
+// ── Carica categorie e costruisce badge ───────────────────────────────────────
 async function loadCategories() {
   const res = await fetch("/api/categories");
-  const cats = await res.json();
-  const sel = $("cat-select");
-  cats.forEach(c => {
-    const opt = document.createElement("option");
-    opt.value = c.name;
-    opt.textContent = `${c.name} (${c.count})`;
-    sel.appendChild(opt);
+  allCategories = await res.json();
+  // Tutte attive all'inizio
+  allCategories.forEach(c => selectedCats.add(c.name));
+
+  const row = $("cat-filter");
+  allCategories.forEach(c => {
+    const badge = document.createElement("span");
+    badge.className = "cat-badge active";
+    badge.dataset.cat = c.name;
+    badge.textContent = `${c.name} (${c.count})`;
+    badge.addEventListener("click", () => toggleCat(c.name));
+    row.appendChild(badge);
   });
 }
+
+function toggleCat(name) {
+  if (selectedCats.has(name)) {
+    selectedCats.delete(name);
+  } else {
+    selectedCats.add(name);
+  }
+  renderBadges();
+  state.page = 1;
+  doSearch();
+}
+
+function renderBadges() {
+  document.querySelectorAll(".cat-badge").forEach(b => {
+    b.classList.toggle("active", selectedCats.has(b.dataset.cat));
+  });
+}
+
+$("btn-all").addEventListener("click", () => {
+  allCategories.forEach(c => selectedCats.add(c.name));
+  renderBadges();
+  state.page = 1;
+  doSearch();
+});
+
+$("btn-none").addEventListener("click", () => {
+  selectedCats.clear();
+  renderBadges();
+  state.page = 1;
+  doSearch();
+});
 
 // ── Ricerca ───────────────────────────────────────────────────────────────────
 async function doSearch() {
   const params = new URLSearchParams({ page: state.page, per_page: 20 });
-  if (state.q)        params.set("q", state.q);
-  if (state.category) params.set("category", state.category);
-  if (state.lv_min)   params.set("level_min", state.lv_min);
-  if (state.lv_max)   params.set("level_max", state.lv_max);
+  if (state.q)      params.set("q", state.q);
+  if (state.lv_min) params.set("level_min", state.lv_min);
+  if (state.lv_max) params.set("level_max", state.lv_max);
+  // Manda le categorie solo se è un sottoinsieme (non tutte e non nessuna)
+  if (selectedCats.size > 0 && selectedCats.size < allCategories.length) {
+    params.set("categories", [...selectedCats].join(","));
+  }
 
   const res  = await fetch("/api/search?" + params);
   const data = await res.json();
@@ -329,10 +562,11 @@ function showDetail(r) {
     el.classList.toggle("active", el.dataset.id === r.id);
   });
   renderDetail(r.category, r.data);
+  if (isMobile()) setMobileView("detail");
 }
 
 function renderDetail(category, d) {
-  const panel = $("detail-panel");
+  const panel = $("detail-content");
 
   // Campi da non mostrare come field-block generici
   const SKIP = new Set(["id", "name", "source", "source_pages", "json_data"]);
@@ -519,21 +753,39 @@ $("search-box").addEventListener("input", e => {
   state.q = e.target.value.trim();
   scheduleSearch();
 });
-$("cat-select").addEventListener("change", e => {
-  state.category = e.target.value;
-  state.page = 1;
-  doSearch();
-});
+function updateRangeFill() {
+  const min = parseInt($("lv-min").value);
+  const max = parseInt($("lv-max").value);
+  const pct = v => ((v - 1) / 29) * 100;
+  $("range-fill").style.left  = pct(min) + "%";
+  $("range-fill").style.width = (pct(max) - pct(min)) + "%";
+  const isDefault = min === 1 && max === 30;
+  $("lv-display").textContent = isDefault ? "1 – 30" : `${min} – ${max}`;
+  $("lv-display").style.color = isDefault ? "" : "var(--accent)";
+}
+
 $("lv-min").addEventListener("input", e => {
-  state.lv_min = e.target.value ? parseInt(e.target.value) : null;
+  let val = parseInt(e.target.value);
+  const maxVal = parseInt($("lv-max").value);
+  if (val > maxVal) { val = maxVal; e.target.value = val; }
+  state.lv_min = val === 1 ? null : val;
+  updateRangeFill();
   scheduleSearch();
 });
 $("lv-max").addEventListener("input", e => {
-  state.lv_max = e.target.value ? parseInt(e.target.value) : null;
+  let val = parseInt(e.target.value);
+  const minVal = parseInt($("lv-min").value);
+  if (val < minVal) { val = minVal; e.target.value = val; }
+  state.lv_max = val === 30 ? null : val;
+  updateRangeFill();
   scheduleSearch();
 });
 
+$("back-btn").addEventListener("click", () => setMobileView("list"));
+
 // ── Init ──────────────────────────────────────────────────────────────────────
+updateRangeFill();
+setMobileView("list");
 loadCategories().then(() => doSearch());
 </script>
 </body>

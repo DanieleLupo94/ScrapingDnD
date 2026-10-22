@@ -40,20 +40,21 @@ def categories():
 
 @app.get("/api/search")
 def search():
-    q        = request.args.get("q", "").strip()
-    category = request.args.get("category", "").strip()
-    lv_min   = request.args.get("level_min", type=int)
-    lv_max   = request.args.get("level_max", type=int)
-    page     = max(1, request.args.get("page", 1, type=int))
-    per_page = min(50, request.args.get("per_page", 20, type=int))
-    offset   = (page - 1) * per_page
+    q          = request.args.get("q", "").strip()
+    categories = [c.strip() for c in request.args.get("categories", "").split(",") if c.strip()]
+    lv_min     = request.args.get("level_min", type=int)
+    lv_max     = request.args.get("level_max", type=int)
+    page       = max(1, request.args.get("page", 1, type=int))
+    per_page   = min(50, request.args.get("per_page", 20, type=int))
+    offset     = (page - 1) * per_page
 
     params: list = []
     filters: list[str] = []
 
-    if category:
-        filters.append("e.category = ?")
-        params.append(category)
+    if categories:
+        placeholders = ",".join("?" * len(categories))
+        filters.append(f"e.category IN ({placeholders})")
+        params.extend(categories)
     if lv_min is not None:
         filters.append("(e.level >= ? OR e.level IS NULL)")
         params.append(lv_min)
