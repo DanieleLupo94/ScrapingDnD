@@ -374,14 +374,44 @@
   }
   #back-btn:hover { border-color: var(--accent); color: var(--text); }
 
+  #filters-toggle { display: none; }
+
   @media (max-width: 640px) {
     header { padding: .6rem 1rem; }
 
-    .header-row1 { flex-wrap: wrap; gap: .6rem; margin-bottom: .5rem; }
+    .header-row1 { flex-wrap: wrap; gap: .6rem; margin-bottom: .4rem; }
 
     header h1 { flex: 0 0 auto; }
     #search-box { flex: 1 1 120px; max-width: 100%; }
     .level-wrap { flex: 0 0 100%; min-width: 0; }
+
+    #filters-toggle {
+      display: flex;
+      align-items: center;
+      gap: .25rem;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--muted);
+      padding: .35rem .65rem;
+      font-size: .78rem;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: border-color .15s, color .15s;
+    }
+    #filters-toggle:hover { border-color: var(--accent); color: var(--text); }
+    #filters-toggle[aria-expanded="true"] { color: var(--text); border-color: var(--accent); }
+
+    #filters-panel {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows .22s ease;
+      overflow: hidden;
+    }
+    #filters-panel > * { min-height: 0; }
+    #filters-panel.open { grid-template-rows: 1fr; }
+    /* inner wrapper needed for grid trick */
+    #filters-panel-inner { overflow: hidden; }
 
     main { flex-direction: column; height: auto; }
 
@@ -426,14 +456,19 @@
         <input id="lv-max" type="range" min="1" max="30" value="30">
       </div>
     </div>
+    <button id="filters-toggle" aria-expanded="false">Filters ▾</button>
   </div>
-  <div class="filter-row" id="cat-filter">
-    <button class="cat-ctrl" id="btn-all">All</button>
-    <button class="cat-ctrl" id="btn-none">None</button>
-    <!-- badges injected by JS -->
-  </div>
-  <div id="ctx-filters">
-    <!-- contextual sub-filter groups injected by JS -->
+  <div id="filters-panel">
+    <div id="filters-panel-inner">
+      <div class="filter-row" id="cat-filter">
+        <button class="cat-ctrl" id="btn-all">All</button>
+        <button class="cat-ctrl" id="btn-none">None</button>
+        <!-- badges injected by JS -->
+      </div>
+      <div id="ctx-filters">
+        <!-- contextual sub-filter groups injected by JS -->
+      </div>
+    </div>
   </div>
 </header>
 
@@ -462,7 +497,10 @@ let debounceTimer = null;
 
 const isMobile = () => window.matchMedia("(max-width: 640px)").matches;
 
+let currentMobileView = "list";
+
 function setMobileView(view) {
+  currentMobileView = view;
   const m = $("main-container");
   if (isMobile()) {
     m.classList.toggle("mobile-list",   view === "list");
@@ -472,7 +510,7 @@ function setMobileView(view) {
   }
 }
 
-window.addEventListener("resize", () => setMobileView("list"));
+window.addEventListener("resize", () => setMobileView(currentMobileView));
 
 // ── Carica categorie e costruisce badge ───────────────────────────────────────
 async function loadCategories() {
@@ -891,6 +929,14 @@ $("lv-max").addEventListener("input", e => {
 });
 
 $("back-btn").addEventListener("click", () => setMobileView("list"));
+
+$("filters-toggle").addEventListener("click", () => {
+  const panel = $("filters-panel");
+  const btn   = $("filters-toggle");
+  const open  = panel.classList.toggle("open");
+  btn.setAttribute("aria-expanded", open);
+  btn.textContent = open ? "Filters ▴" : "Filters ▾";
+});
 
 // ── Init ──────────────────────────────────────────────────────────────────────
 updateRangeFill();
